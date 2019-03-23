@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[190324 Today I Learned]]></title>
+    <url>%2F2019%2F03%2F24%2F190324%2F</url>
+    <content type="text"><![CDATA[오늘 한 일 Hueman에서 nexT로 갈아탔다. 간단한 Markdown문법을 배웠다.Markdown Editor는 Marp를 써보려고 한다. Markdown이미지 업로드 꿀팁 이미지가 올라와서 행복한 개구리 :)]]></content>
+      <categories>
+        <category>TIL</category>
+      </categories>
+      <tags>
+        <tag>TIL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[190323 Today I Learned]]></title>
+    <url>%2F2019%2F03%2F23%2F190323%2F</url>
+    <content type="text"><![CDATA[오늘 한 일 초보몽키님의 블로그를 참고하여나도 Today I Learned (TIL)을본격적으로 시작해 보려고 한다. HTML,CSS,JavaScript 모르는 상태에서구글링하면서 Hexo블로그를 만들어 보았다.TIL을 여기서 할 지 티스토리에서 할 지 고민 중 _config.yml파일을 수정하는 방법을 알았다. Notepad++를 사용한다.]]></content>
+      <categories>
+        <category>TIL</category>
+      </categories>
+      <tags>
+        <tag>TIL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F03%2F22%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
