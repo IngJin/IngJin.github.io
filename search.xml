@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[190325 Today I Learned]]></title>
+    <url>%2F2019%2F03%2F25%2F190325%2F</url>
+    <content type="text"><![CDATA[오늘 한 일 국비과정 사전예습 시작 19.03.25~19.03.29 09:20 ~ 12:10 (월~금) 블로그에 Disqus를 연동이제 나도 댓글을 남길 수 있다. Disqus 연동 요약Disqus에 가입하여 shortname을 설정 한 뒤themes/note 경로의 _config.yml 에서#Disqus부분을 다음과 같이 수정한다. #Disqus disqus: enable: true shortname: ingjin #shortname 삽입 count: true lazyload: false 그렇다, 오늘은 별거 안했다.]]></content>
+      <categories>
+        <category>TIL</category>
+      </categories>
+      <tags>
+        <tag>TIL</tag>
+        <tag>Disqus</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[190324 Today I Learned]]></title>
     <url>%2F2019%2F03%2F24%2F190324%2F</url>
     <content type="text"><![CDATA[오늘 한 일 Hueman에서 nexT로 갈아탔다. 간단한 Markdown문법을 배웠다.Markdown Editor는 Marp를 써보려고 한다. Markdown이미지 업로드 꿀팁 이미지가 올라와서 행복한 개구리 :)]]></content>
