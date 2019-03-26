@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[190326 Today I Learned]]></title>
     <url>%2F2019%2F03%2F26%2F190326%2F</url>
-    <content type="text"><![CDATA[오늘 한 일 Java 개발 환경 구축 JDK 설치 JAVA_HOME 환경 변수 설정 PATH 환경 변수 설정;%JAVA_HOME%\bin; CLASSPATH 환경 변수 설정.;%JAVA_HOME%\lib; CLASSPATH 란? 컴퓨터 어딘가에 존재하는클래스 파일을 사용하기 위한 방법. 코드블럭 라인넘버가 나온다.어제는 왜 안나온거지..? 123function add(x, y) &#123;return x + y&#125;]]></content>
+    <content type="text"><![CDATA[오늘 한 일 Java 개발 환경 구축 JDK 설치 JAVA_HOME 환경 변수 생성 PATH 환경 변수 추가;%JAVA_HOME%\bin; CLASSPATH 환경 변수 생성.;%JAVA_HOME%\lib; CLASSPATH? 컴퓨터 어딘가에 존재하는클래스 파일을 사용하기 위한 방법. 미지정시 현재 디렉토리에서만필요한 클래스를 가져다 쓴다. 코드블럭 라인넘버가 나온다.어제는 왜 안나온거지..? 123function add(x, y) &#123;return x + y&#125;]]></content>
       <categories>
         <category>TIL</category>
       </categories>
