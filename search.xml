@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[190327 Today I Learned]]></title>
+    <url>%2F2019%2F03%2F27%2F190327%2F</url>
+    <content type="text"><![CDATA[오늘 한 일 예비군 기본훈련 다녀왔습니다. Markdown 이미지 크기 조절&lt;img&gt;태그가 더 편한것 같은 이 느낌 &lt;img src="이미지 url" width="원하는 크기"&gt; width=&quot;800&quot; width=&quot;400&quot; 사실 마크다운으로 수정하면자꾸 엑박이 뜬다..이유가 뭘까..?]]></content>
+      <categories>
+        <category>TIL</category>
+      </categories>
+      <tags>
+        <tag>TIL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[190326 Today I Learned]]></title>
     <url>%2F2019%2F03%2F26%2F190326%2F</url>
     <content type="text"><![CDATA[오늘 한 일 Java 개발 환경 구축 JDK 설치 JAVA_HOME 환경 변수 생성 PATH 환경 변수 추가;%JAVA_HOME%\bin; CLASSPATH 환경 변수 생성.;%JAVA_HOME%\lib; CLASSPATH? 컴퓨터 어딘가에 존재하는클래스 파일을 사용하기 위한 방법. 미지정시 현재 디렉토리에서만필요한 클래스를 가져다 쓴다. 코드블럭 라인넘버가 나온다.어제는 왜 안나온거지..? 123function add(x, y) &#123;return x + y&#125;]]></content>
