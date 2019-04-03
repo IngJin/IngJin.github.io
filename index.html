@@ -368,6 +368,258 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/03/java01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IngJin">
+      <meta itemprop="description" content="잉진은 오늘도 코딩을 합니다.">
+      <meta itemprop="image" content="/images/fava.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="잉로그">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/03/java01/" class="post-title-link" itemprop="url">JAVA 01 데이터타입</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-04-03 18:56:37" itemprop="dateCreated datePublished" datetime="2019-04-03T18:56:37+09:00">2019-04-03</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-04-04 00:02:21" itemprop="dateModified" datetime="2019-04-04T00:02:21+09:00">2019-04-04</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/04/03/java01/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/03/java01/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="기본용어"><a href="#기본용어" class="headerlink" title="기본용어"></a>기본용어</h2><ul>
+<li><code>선언</code><br>  변수의 형을 정의하는 것    <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a; <span class="keyword">char</span> b; <span class="keyword">double</span> c;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><code>할당</code><br>  값을 주는 것  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span>;  b = <span class="string">'A'</span>; c = <span class="number">12.5</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><code>초기화</code><br>  선언과 동시에 값을 주는 것    <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>; <span class="keyword">char</span> b = <span class="string">'A'</span> <span class="keyword">double</span> c = <span class="number">12.5</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><code>나열</code><br>  같은 데이터 타입일때 쭉 연결하는 것    <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>, b = <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><code>재할당</code><br>  할당된 값에 다시 할당해서 값을 바꾸는 것      <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>; → <span class="keyword">int</span> a = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="변수"><a href="#변수" class="headerlink" title="변수"></a><code>변수</code></h2><ul>
+<li><p><code>변수</code><br> <strong>데이터를 저장할 메모리 기억공간</strong><br> 기억공간에는 이름이 있어야 한다. ▶ 식별자<br> 데이터를 담는 상자 : 크기 ▶ Data Type(자료형)  </p>
+<p> ※ <code>변수 이름 작성 규칙</code>  </p>
+<ul>
+<li>반드시 영문자 소문자로 시작</li>
+<li>첫글자는 영문자, ‘_’, ‘$’으로만 시작</li>
+<li>예약어(KeyWord)는 사용 불가</li>
+<li>띄어쓰기는 사용할 수 없다</li>
+<li>가급적이면 이름에 의미가 나타나도록 작성하자  </li>
+</ul>
+</li>
+</ul>
+<h2 id="자료형"><a href="#자료형" class="headerlink" title="자료형"></a><code>자료형</code></h2><ul>
+<li><p><code>자료형(Data Type)</code><br> <strong>변수의 크기와 저장해야 할 데이터의 종류를 결정</strong>  </p>
+<ol>
+<li><p><code>기본자료형(PDT)</code><br>: 기본 데이터 타입의 크기가 정해져있다.<br>CPU나 운영체제에 따라 변경되지 않는다. </p>
+<p><code>정수형</code> : byte(1), short(2), int(4), long(8)<br><code>실수형</code> : float(4), double(8)<br><code>문자형(단일문자)</code> : char(2)<br><code>부울형(논리형)</code> : boolean(1)</p>
+</li>
+<li><p><code>사용자정의 자료형(UDDP)</code><br>: 참조형 자료(Reference Type) → 4Byte    </p>
+<p><code>클래스 타입</code><br><code>인터페이스 타입</code><br><code>배열(열거) 타입</code></p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="예제-1"><a href="#예제-1" class="headerlink" title="예제 1"></a>예제 1</h2><ul>
+<li><code>선언</code>,<code>할당</code>,<code>초기화</code>  </li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Variable01</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//정수 2개를 저장할 변수를 선언하시오.(변수명은 a.b)</span></span><br><span class="line">		<span class="keyword">int</span> a;	<span class="comment">//정수형 변수a를 선언</span></span><br><span class="line">		<span class="keyword">int</span> b;	<span class="comment">//정수형 변수b를 선언</span></span><br><span class="line">		<span class="comment">//int a,b;	//같은 자료형의 변수를 나열(comma(,)구분)</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//변수 a에 10, 변수 b에 20을 할당하시오.</span></span><br><span class="line">		a = <span class="number">10</span>;	<span class="comment">//변수 a에 값(10)을 할당(대입)</span></span><br><span class="line">		b = <span class="number">20</span>;	<span class="comment">//변수 b에 값(20)을 할당(대입)</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//정수형 변수c와 d를 선언하고, c에 30,d에 40을 할당하시오.</span></span><br><span class="line">		<span class="keyword">int</span> c = <span class="number">30</span>;	<span class="comment">//선언과 동시에 값을 할당 ▶ 초기화</span></span><br><span class="line">		<span class="keyword">int</span> d = <span class="number">40</span>;	<span class="comment">//선언과 동시에 값을 할당 ▶ 초기화</span></span><br><span class="line">		<span class="comment">// int c = 30, d = 40;	//같은 자료형의 변수를 초기화하고 나열</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//각각의 변수에 저장된 데이터를 출력</span></span><br><span class="line">		System.out.println(<span class="string">"a의 값:"</span> + a);</span><br><span class="line">		System.out.println(<span class="string">"b의 값:"</span> + b);</span><br><span class="line">		System.out.println(<span class="string">"c의 값:"</span> + c);</span><br><span class="line">		System.out.println(<span class="string">"d의 값:"</span> + d);</span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="예제-2"><a href="#예제-2" class="headerlink" title="예제 2"></a>예제 2</h2><ul>
+<li><code>재할당</code>  </li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Variable02</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//정수형 변수 a와 b를 선언하고, a에 10, b에 20을 할당하시오.</span></span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">		<span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//변수 a와 b의 값을 출력</span></span><br><span class="line">		System.out.println(a);</span><br><span class="line">		System.out.println(b);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//a의 값을 30으로 b의 값을 40으로 변경하여 출력하시오 ▶ 재할당</span></span><br><span class="line">		a = <span class="number">30</span>; <span class="comment">// a의 값이 10에서 30으로 변경(재할당)</span></span><br><span class="line">		b = <span class="number">40</span>;	<span class="comment">// b의 값이 20에서 40으로 변경(재할당)</span></span><br><span class="line">		System.out.println(a);</span><br><span class="line">		System.out.println(b);</span><br><span class="line">	&#125; <span class="comment">//main</span></span><br><span class="line">&#125; <span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="예제-3"><a href="#예제-3" class="headerlink" title="예제 3"></a>예제 3</h2><ul>
+<li>정수형 <code>byte</code>,<code>short</code>,<code>int</code>,<code>long</code>  </li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Variable03</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//정수형 데이터 타입 : byte, short, int, long</span></span><br><span class="line">		<span class="keyword">byte</span> b = <span class="number">100</span>;	<span class="comment">//1Byte (-128 ~ 127)</span></span><br><span class="line">		System.out.println(<span class="string">"변수 b:"</span> + b);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">short</span> s = <span class="number">1000</span>; <span class="comment">//2Byte (-32,768 ~ 32,767)</span></span><br><span class="line">		System.out.println(<span class="string">"변수 s:"</span> + s);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">1000000</span>; <span class="comment">//4Byte (-2,147,483,648 ~ 2,147,483,647)</span></span><br><span class="line">		System.out.println(<span class="string">"변수 i:"</span> + i);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">long</span> l = <span class="number">12345678900L</span>; <span class="comment">// long 타입은 숫자 뒤에 L, </span></span><br><span class="line">		<span class="comment">// 모든 정수타입 리터럴은 int형으로 처리하기 때문</span></span><br><span class="line">		System.out.println(<span class="string">"변수 l:"</span> + l);</span><br><span class="line">	&#125;	<span class="comment">//main()</span></span><br><span class="line">&#125;	<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="예제-4"><a href="#예제-4" class="headerlink" title="예제 4"></a>예제 4</h2><ul>
+<li>실수형 <code>float</code>,<code>double</code>  </li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Variable04</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//실수형 데이터 타입 : float, double</span></span><br><span class="line">		<span class="keyword">float</span> f = <span class="number">123.4567890123456789F</span>;	<span class="comment">//4Byte</span></span><br><span class="line">		<span class="keyword">double</span> d = <span class="number">123.4567890123456789</span>; 	<span class="comment">//8Byte</span></span><br><span class="line">		</span><br><span class="line">		System.out.println(<span class="string">"변수 f:"</span> + f);	</span><br><span class="line">		<span class="comment">//123.45679</span></span><br><span class="line">		<span class="comment">//마지막 숫자 반올림해서 나옴</span></span><br><span class="line">		System.out.println(<span class="string">"변수 d:"</span> + d);	</span><br><span class="line">		<span class="comment">//123.45678901234568</span></span><br><span class="line">		<span class="comment">//마지막 숫자 반올림해서 나옴</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="예제-5"><a href="#예제-5" class="headerlink" title="예제 5"></a>예제 5</h2><ul>
+<li>문자형 <code>char</code> / 문자열 <code>String</code>    </li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Variable05</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//문자 데이터 타입 : char(2Byte) ▶ 하나의 글자만 저장</span></span><br><span class="line">		<span class="comment">//값을 할당할 때는 작은따옴표를 사용한다.</span></span><br><span class="line">		<span class="keyword">char</span> a = <span class="string">'A'</span>;</span><br><span class="line">		<span class="keyword">char</span> b = <span class="string">'가'</span>;</span><br><span class="line">		<span class="keyword">char</span> c = <span class="string">'★'</span>;</span><br><span class="line">		</span><br><span class="line">		System.out.println(<span class="string">"변수 a:"</span> + a);</span><br><span class="line">		System.out.println(<span class="string">"변수 b:"</span> + b);</span><br><span class="line">		System.out.println(<span class="string">"변수 c:"</span> + c);</span><br><span class="line">		<span class="comment">//----------------------------------</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//String : 문자,문자열을 저장할 수 있는 클래스(→첫글자 대문자)</span></span><br><span class="line">		<span class="comment">//값을 할당할 때는 쌍따옴표를 사용한다.</span></span><br><span class="line">		String str1 = <span class="string">"ABC"</span>;</span><br><span class="line">		String str2 = <span class="string">"가나다"</span>;</span><br><span class="line">		</span><br><span class="line">		System.out.println(<span class="string">"변수 str1:"</span> +str1);</span><br><span class="line">		System.out.println(<span class="string">"변수 str2:"</span> +str2);</span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="예제-6"><a href="#예제-6" class="headerlink" title="예제 6"></a>예제 6</h2><ul>
+<li>논리형 <code>boolean</code>    </li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Variable06</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 논리형(부울형):boolean(1byte)▶true,false 만 기억</span></span><br><span class="line">		<span class="keyword">boolean</span> t = <span class="keyword">true</span>;</span><br><span class="line">		<span class="keyword">boolean</span> f = <span class="keyword">false</span>;</span><br><span class="line">	</span><br><span class="line">		System.out.println(<span class="string">"변수 t:"</span> + t);</span><br><span class="line">		System.out.println(<span class="string">"변수 f:"</span> + f);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/01/1941/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1280,7 +1532,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
@@ -1299,7 +1551,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">카테고리</span>
                   </a>
                 </div>
@@ -1318,7 +1572,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">태그</span>
                   </a>
                 </div>
