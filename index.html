@@ -368,6 +368,200 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/08/1942/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IngJin">
+      <meta itemprop="description" content="잉진은 오늘도 코딩을 합니다.">
+      <meta itemprop="image" content="/images/fava.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="잉로그">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/08/1942/" class="post-title-link" itemprop="url">19년 4월 2주차 Today I Learned</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-04-08 18:56:37 / Updated at: 22:43:51" itemprop="dateCreated datePublished" datetime="2019-04-08T18:56:37+09:00">2019-04-08</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/TIL/" itemprop="url" rel="index"><span itemprop="name">TIL</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/04/08/1942/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/08/1942/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="190408-TIL"><a href="#190408-TIL" class="headerlink" title="190408 TIL"></a>190408 TIL</h2><ul>
+<li><p><code>다중 if문</code><br>  : 여러개의 조건을 판단하여, 해당 조건을 만족할 경우 실행</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(조건식<span class="number">1</span>)&#123;</span><br><span class="line">	조건식<span class="number">1</span>이 참일때 실행되는 문장;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(조건식<span class="number">2</span>)&#123;</span><br><span class="line">	조건식<span class="number">2</span>가 참일때 실행되는 문장;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(조건식N)&#123;</span><br><span class="line">	조건식N이 참일때 실행되는 문장;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	거짓일때 실행되는 문장;</span><br><span class="line">	 &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>중첩 if문</code><br>  : if문 안에 다른 if문이 있는 문장</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(조건식A)&#123;</span><br><span class="line">	<span class="keyword">if</span>(조건식<span class="number">1</span>)&#123;</span><br><span class="line">	 	조건식A를 만족한 상태에서 조건식<span class="number">1</span>이 참일때 실행되는 문장;</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(조건식<span class="number">2</span>)&#123;</span><br><span class="line">	 	조건식A를 만족한 상태에서 조건식<span class="number">2</span>가 참일때 실행되는 문장;</span><br><span class="line">	&#125;<span class="comment">//if</span></span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(조건식B)&#123;</span><br><span class="line">	조건식 B가 참일때 실행되는 문장;</span><br><span class="line">&#125;<span class="comment">//if</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>선택문(switch ~~ case ~~)</code><br>  : 다중 if문을 간략하게 표현</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(기준값)&#123;</span><br><span class="line">	<span class="keyword">case</span>값<span class="number">1</span> :</span><br><span class="line">		값<span class="number">1</span>이 참일때 실행되는 문장;</span><br><span class="line">	 	<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span>값<span class="number">2</span> :</span><br><span class="line">		값<span class="number">2</span>가 참일때 실행되는 문장;</span><br><span class="line">	 	<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span>값N :</span><br><span class="line">	 	값N이 참일때 실행되는 문장;</span><br><span class="line">	 	<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">default</span> :</span><br><span class="line">	 	거짓일때 실행되는 문장;</span><br><span class="line">	 	<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>기준값, 비교값(값1,값2,값N)은 정수형(수치형)의 자료이여야 한다.  </li>
+<li>실행문 뒤에는 반드시 break; 입력  </li>
+<li>제한사항(제약조건)으로 인하여 실무에서는 거의 사용되지 않는다.</li>
+</ul>
+<ul>
+<li><p>반복문(순환문, Loop문) : <code>for</code>, <code>while</code>, <code>do ~ while</code></p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(초기값(시작값) ; 조건식(최종값) ; 반복후작업(증감값)) &#123;</span><br><span class="line"> 		실행문(반복할 문장);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/03/java01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -388,7 +582,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/04/03/java01/" class="post-title-link" itemprop="url">JAVA 01 데이터타입</a>
+                <a href="/2019/04/03/java01/" class="post-title-link" itemprop="url">JAVA기초 01.데이터타입</a>
               
             
           </h1>
@@ -430,7 +624,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2019-04-04 00:02:21" itemprop="dateModified" datetime="2019-04-04T00:02:21+09:00">2019-04-04</time>
+                <time title="Updated at: 2019-04-05 23:43:09" itemprop="dateModified" datetime="2019-04-05T23:43:09+09:00">2019-04-05</time>
               
             
           </span>
@@ -532,11 +726,9 @@
 <h2 id="자료형"><a href="#자료형" class="headerlink" title="자료형"></a><code>자료형</code></h2><ul>
 <li><p><code>자료형(Data Type)</code><br> <strong>변수의 크기와 저장해야 할 데이터의 종류를 결정</strong>  </p>
 <ol>
-<li><p><code>기본자료형(PDT)</code><br>: 기본 데이터 타입의 크기가 정해져있다.<br>CPU나 운영체제에 따라 변경되지 않는다. </p>
-<p><code>정수형</code> : byte(1), short(2), int(4), long(8)<br><code>실수형</code> : float(4), double(8)<br><code>문자형(단일문자)</code> : char(2)<br><code>부울형(논리형)</code> : boolean(1)</p>
+<li><p><code>기본자료형(PDT)</code><br>: 기본 데이터 타입의 크기가 정해져있다.<br>CPU나 운영체제에 따라 변경되지 않는다.<br><code>정수형</code> : byte(1), short(2), int(4), long(8)<br><code>실수형</code> : float(4), double(8)<br><code>문자형(단일문자)</code> : char(2)<br><code>부울형(논리형)</code> : boolean(1)</p>
 </li>
-<li><p><code>사용자정의 자료형(UDDP)</code><br>: 참조형 자료(Reference Type) → 4Byte    </p>
-<p><code>클래스 타입</code><br><code>인터페이스 타입</code><br><code>배열(열거) 타입</code></p>
+<li><p><code>사용자정의 자료형(UDDP)</code><br>: 참조형 자료(Reference Type) → 4Byte<br><code>클래스 타입</code><br><code>인터페이스 타입</code><br><code>배열(열거) 타입</code></p>
 </li>
 </ol>
 </li>
@@ -1594,7 +1786,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
