@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="ko">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/fafacon.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/fafacon.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/fafacon.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="연산 연산 : 주어진 식을 계산하여 결과를 얻어내는 과정  명령어의 형식[피연산자 연산자 피연산자]ex) a + 5, b + 4, …  명령부 :연산자, OpCode         주소부 :연산에 필요한 값[피연산자], Operand    1. 산술연산자 산술연산자 : +(덧셈),-(뺄셈),*(곱셈),/(나눗셈)%(나머지연산) : 짝수/홀수, 배수의 판단에">
+<meta name="keywords" content="JAVA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA기초 03.연산자(Operator)">
+<meta property="og:url" content="https://ingjin.github.io/2019/04/07/java03/index.html">
+<meta property="og:site_name" content="잉로그">
+<meta property="og:description" content="연산 연산 : 주어진 식을 계산하여 결과를 얻어내는 과정  명령어의 형식[피연산자 연산자 피연산자]ex) a + 5, b + 4, …  명령부 :연산자, OpCode         주소부 :연산에 필요한 값[피연산자], Operand    1. 산술연산자 산술연산자 : +(덧셈),-(뺄셈),*(곱셈),/(나눗셈)%(나머지연산) : 짝수/홀수, 배수의 판단에">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="https://user-images.githubusercontent.com/23150245/55808500-28e94200-5b1f-11e9-84b2-71c400403ec7.PNG">
+<meta property="og:updated_time" content="2019-04-09T14:31:37.422Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JAVA기초 03.연산자(Operator)">
+<meta name="twitter:description" content="연산 연산 : 주어진 식을 계산하여 결과를 얻어내는 과정  명령어의 형식[피연산자 연산자 피연산자]ex) a + 5, b + 4, …  명령부 :연산자, OpCode         주소부 :연산에 필요한 값[피연산자], Operand    1. 산술연산자 산술연산자 : +(덧셈),-(뺄셈),*(곱셈),/(나눗셈)%(나머지연산) : 짝수/홀수, 배수의 판단에">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/23150245/55808500-28e94200-5b1f-11e9-84b2-71c400403ec7.PNG">
+
+
+
+
+
+
+  <link rel="canonical" href="https://ingjin.github.io/2019/04/07/java03/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>JAVA기초 03.연산자(Operator) | 잉로그</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="ko">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">잉로그</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Study & Develop Blog</p>
+      
+    
+    
+      <a>
+        <img class="custom-logo-image" src="/images/inglogo.png" alt="잉로그">
+      </a>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>홈</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>태그</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>카테고리</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>아카이브</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>검색</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+  
+  
+
+  
+
+  <a href="https://github.com/IngJin" class="github-corner" title="Hello Bro :)" aria-label="Hello Bro :)" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/07/java03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IngJin">
+      <meta itemprop="description" content="잉진은 오늘도 코딩을 합니다.">
+      <meta itemprop="image" content="/images/fava.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="잉로그">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JAVA기초 03.연산자(Operator)
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-04-07 18:56:37" itemprop="dateCreated datePublished" datetime="2019-04-07T18:56:37+09:00">2019-04-07</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-04-09 23:31:37" itemprop="dateModified" datetime="2019-04-09T23:31:37+09:00">2019-04-09</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/04/07/java03/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/07/java03/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="연산"><a href="#연산" class="headerlink" title="연산"></a>연산</h2><ul>
+<li><p><code>연산</code> : <strong>주어진 식을 계산하여 결과를 얻어내는 과정</strong></p>
+</li>
+<li><p>명령어의 형식<br>[<code>피연산자</code> <code>연산자</code> <code>피연산자</code>]<br>ex) <code>a + 5</code>, <code>b + 4</code>, …</p>
+<ul>
+<li>명령부 :<code>연산자</code>, <code>OpCode</code>        </li>
+<li>주소부 :<code>연산에 필요한 값</code>[<code>피연산자</code>], <code>Operand</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="1-산술연산자"><a href="#1-산술연산자" class="headerlink" title="1. 산술연산자"></a>1. 산술연산자</h2><ul>
+<li><code>산술연산자</code> : <code>+</code>(덧셈),<code>-</code>(뺄셈),<code>*</code>(곱셈),<code>/</code>(나눗셈)<br><code>%</code>(나머지연산) : 짝수/홀수, 배수의 판단에 사용 ▶ 주로 <code>조건식</code>에서 사용</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator01</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">10</span>, b=<span class="number">3</span>;		</span><br><span class="line">		<span class="keyword">int</span> addResult = a + b;	<span class="comment">//덧셈</span></span><br><span class="line">		<span class="keyword">int</span> subResult = a - b;	<span class="comment">//뺄셈</span></span><br><span class="line">		<span class="keyword">int</span> mulResult = a * b;	<span class="comment">//곱셉</span></span><br><span class="line">		<span class="keyword">int</span> divResult = a / b;	<span class="comment">//나눗셈</span></span><br><span class="line">		<span class="keyword">int</span> modResult = a % b;	<span class="comment">//나머지</span></span><br><span class="line">		</span><br><span class="line">		System.out.println(addResult);	<span class="comment">//출력값 : 13</span></span><br><span class="line">		System.out.println(subResult);	<span class="comment">//출력값 : 7</span></span><br><span class="line">		System.out.println(mulResult);	<span class="comment">//출력값 : 30</span></span><br><span class="line">		System.out.println(divResult);	<span class="comment">//출력값 : 3 (int로 선언했기 때문)</span></span><br><span class="line">		System.out.println(modResult);	<span class="comment">//출력값 : 1</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> x = <span class="number">3</span>, y = <span class="number">5</span>;</span><br><span class="line">		System.out.println(<span class="string">"x + y = "</span> + x + y);		</span><br><span class="line">		<span class="comment">//출력값 : x + y = 35(결합)</span></span><br><span class="line">		System.out.println(<span class="string">"x + y = "</span> + (x + y)); 	</span><br><span class="line">		<span class="comment">//출력값 : x + y = 8(연산)</span></span><br><span class="line">		System.out.println(x + y + <span class="string">" = x + y"</span>);</span><br><span class="line">		<span class="comment">//출력값 : 8 = x + y</span></span><br><span class="line">		<span class="comment">//System.out.println("x - y = " + x - y); </span></span><br><span class="line">		<span class="comment">//오류 : + x 결합 후 - y 나오기 때문</span></span><br><span class="line">		System.out.println(<span class="string">"x - y = "</span> + (x - y));</span><br><span class="line">		<span class="comment">//출력값 : x - y = -2</span></span><br><span class="line">		System.out.println(x - y + <span class="string">" = x - y"</span>);</span><br><span class="line">		<span class="comment">//출력값 : -2 = x - y</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-증감연산자"><a href="#2-증감연산자" class="headerlink" title="2. 증감연산자"></a>2. 증감연산자</h2><ul>
+<li><code>증감연산자</code> : <code>++</code>(증가), <code>--</code>(감소)<br>  ▶ <code>반복문</code>에서 많이 사용<br>  별도의 연산결과를 처리하지 않은 연산자 : <code>단항연산</code><br>  <strong>연산자의 위치가 변수의 앞인지 뒤인지에 따라 결과가 다르다.</strong></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator02</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> b = <span class="number">10</span>;</span><br><span class="line">		System.out.println(++a);	<span class="comment">//출력값 : 1 ▶ 전위표기법(prefix)</span></span><br><span class="line">		System.out.println(--b);	<span class="comment">//출력값 : 9</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> d = <span class="number">10</span>;</span><br><span class="line">		System.out.println(c++); 	<span class="comment">//출력값 : 0 메모리 상에서는 1</span></span><br><span class="line">		System.out.println(c); 		<span class="comment">//출력값 : 1</span></span><br><span class="line">		System.out.println(d--); 	<span class="comment">//출력값 : 10 메모리 상에서는 9</span></span><br><span class="line">		System.out.println(d);		<span class="comment">//출력값 : 9</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//x = 5, y = 10 일 경우 'x++ + ++x + y++'의 결과와 </span></span><br><span class="line">		<span class="comment">//연산이 수행된후 'x+y'의 결과는?</span></span><br><span class="line">		<span class="keyword">int</span> x = <span class="number">5</span>;</span><br><span class="line">		<span class="keyword">int</span> y = <span class="number">10</span>;</span><br><span class="line">		<span class="keyword">int</span> z = x++ + ++x + y++;</span><br><span class="line">		System.out.println(z);		<span class="comment">//출력값 : 22 (5 + 7 + 10)</span></span><br><span class="line">		System.out.println(x+y);	<span class="comment">//출력값 : 18 (7 + 11)</span></span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		  연산	출력 		메모리 </span></span><br><span class="line"><span class="comment">		 x++	5		6(x)</span></span><br><span class="line"><span class="comment">		 ++x	7		7(X)</span></span><br><span class="line"><span class="comment">		 y++	10		11(y)</span></span><br><span class="line"><span class="comment">		 현장에서 이런거 쓸 일 없음~</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-비트연산자"><a href="#3-비트연산자" class="headerlink" title="3.비트연산자"></a>3.비트연산자</h2><ul>
+<li><code>비트연산자</code><br>  : 개발자의 입장에서 비트를 직접 조작할 수 있다는 장점 → <code>하드웨어 제어</code><br>  <em>현재는 자바에서 거의 사용하지 않는다.</em><br>  1.<code>&amp;(AND)</code>: <code>모두 1일때</code> → 1출력<br>  2.<code>|(OR)</code> : <code>하나라도 1일때</code> → 1출력<br>  3.<code>^(XOR)</code>: <code>서로 다를때</code> → 1출력</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator03</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> x = <span class="number">3</span>; <span class="comment">//2진법 : 0011</span></span><br><span class="line">		<span class="keyword">int</span> y = <span class="number">2</span>; <span class="comment">//2진법 : 0010</span></span><br><span class="line">		</span><br><span class="line">		System.out.println(x &amp; y);	<span class="comment">//출력값 : 2 (0010)</span></span><br><span class="line">		System.out.println(x | y);	<span class="comment">//출력값 : 3 (0011)</span></span><br><span class="line">		System.out.println(x ^ y);	<span class="comment">//출력값 : 1 (0001)</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="4-비교연산자"><a href="#4-비교연산자" class="headerlink" title="4.비교연산자"></a>4.비교연산자</h2><ul>
+<li><code>비교연산자</code><br>  : 연산의 결과는 <code>true</code>, <code>false</code> 반환<br>  ▶ <code>조건식</code>에 많이 사용<ol>
+<li><code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code> : 수학의 연산과 같은 관계연산자(<code>비교연산</code>)</li>
+<li><code>a = b</code> : 수학에서는 같다라는 의미이지만 프로그램에서는 <code>할당(대입)</code>연산자</li>
+<li><code>a == b</code> : 프로그램에서 <code>같다</code>라는 의미</li>
+<li><code>a != b</code> : <code>같지않다</code>라는 의미</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator04</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">10</span>, b = <span class="number">5</span>;</span><br><span class="line">		System.out.println(a&gt;b);	<span class="comment">//true</span></span><br><span class="line">		System.out.println(a&gt;=b);	<span class="comment">//true</span></span><br><span class="line">		System.out.println(a&lt;b);	<span class="comment">//false</span></span><br><span class="line">		System.out.println(a&lt;=b);	<span class="comment">//false</span></span><br><span class="line">		System.out.println(a==b);	<span class="comment">//false</span></span><br><span class="line">		System.out.println(a!=b);	<span class="comment">//true</span></span><br><span class="line">		</span><br><span class="line">		System.out.println(a&gt;<span class="number">10</span>);	<span class="comment">//false</span></span><br><span class="line">		System.out.println(a&gt;=<span class="number">10</span>);	<span class="comment">//true</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="5-논리연산자"><a href="#5-논리연산자" class="headerlink" title="5.논리연산자"></a>5.논리연산자</h2><ul>
+<li><code>논리연산자</code><br>  : 연산의 결과는 <code>true</code>, <code>false</code> 반환<br>  <code>여러개의 조건</code>을 판단 ▶ <code>조건식</code>에 많이 사용<ol>
+<li><code>조건A &amp;&amp; 조건B</code> : 조건A도, 조건B도 <code>모두 참일 경우</code> → 참으로 출력</li>
+<li><code>조건A || 조건B</code> : 조건A 또는 조건B 중에서 <code>하나라도 참일 경우</code> → 참으로 출력</li>
+<li><code>AND</code> 조건 (모두 만족) : <code>~~이면서</code>, <code>~~이고</code> </li>
+<li><code>OR</code> 조건 (하나라도 만족) : <code>~~이거나</code>, <code>~~또는</code></li>
+</ol>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator05</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="number">10</span> &gt; <span class="number">5</span> &amp;&amp; <span class="number">20</span> &gt; <span class="number">5</span>);	<span class="comment">//true &amp;&amp; true → true</span></span><br><span class="line">		System.out.println(<span class="number">10</span> &gt; <span class="number">5</span> &amp;&amp; <span class="number">5</span> &gt; <span class="number">20</span>);	<span class="comment">//true &amp;&amp; false → false</span></span><br><span class="line">		System.out.println(<span class="number">5</span> &gt; <span class="number">10</span> &amp;&amp; <span class="number">20</span> &gt; <span class="number">5</span>);	<span class="comment">//false &amp;&amp; true → false</span></span><br><span class="line">		System.out.println(<span class="number">5</span> &gt; <span class="number">10</span> &amp;&amp; <span class="number">5</span> &gt; <span class="number">20</span>);	<span class="comment">//false &amp;&amp; false → false</span></span><br><span class="line">		<span class="comment">//Dead code : 두 조건 중 조건1이 false 일때, 조건2가 무엇이든 false가 된다.</span></span><br><span class="line">		System.out.println(<span class="number">10</span> &gt; <span class="number">5</span> || <span class="number">20</span> &gt; <span class="number">5</span>);	<span class="comment">//true || true → true</span></span><br><span class="line">		System.out.println(<span class="number">10</span> &gt; <span class="number">5</span> || <span class="number">5</span> &gt; <span class="number">20</span>);	<span class="comment">//true || false → true</span></span><br><span class="line">		<span class="comment">//Dead code : 두 조건 중 조건1이 true 일때, 조건2가 무엇이든 true가 된다.</span></span><br><span class="line">		System.out.println(<span class="number">5</span> &gt; <span class="number">10</span> || <span class="number">20</span> &gt; <span class="number">5</span>);	<span class="comment">//false || true → true</span></span><br><span class="line">		System.out.println(<span class="number">5</span> &gt; <span class="number">10</span> || <span class="number">5</span> &gt; <span class="number">20</span>);	<span class="comment">//false || false → false</span></span><br><span class="line"> 	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="6-대입연산자"><a href="#6-대입연산자" class="headerlink" title="6.대입연산자"></a>6.대입연산자</h2><ul>
+<li><p><code>대입연산자(=)</code><br>  : <code>=</code>(equal)은 같다라는 의미가 아니라 <code>대입</code>을 의미 ▶ 할당연산자<br>  L-Value = R-Value : R-Value의 값(연산결과)을 L-Value에 대입(할당)</p>
+</li>
+<li><p><code>복합대입연산자</code><br>  : R-Value에서 사용되는 변수와 L-Value에 대입(할당)되는 변수가 동일할 때 사용 </p>
+<ul>
+<li><code>a += b</code> / <code>a = a + b</code> 과 동일</li>
+<li><code>a -= b</code> / <code>a = a - b</code> 과 동일</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator06</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">10</span>;	<span class="comment">//정수형 변수 a를 선언하고, 값(10)을 할당 → 초기화</span></span><br><span class="line">		System.out.println(<span class="string">"a의 값 : "</span> + a);	<span class="comment">//10</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> b = a;	<span class="comment">//정수형 변수 b를 선언하고, 값(변수 a의 값)을 할당 → 초기화</span></span><br><span class="line">		System.out.println(<span class="string">"b의 값 : "</span> + b);	<span class="comment">//10</span></span><br><span class="line">		</span><br><span class="line">		b = a + a;	<span class="comment">//재할당</span></span><br><span class="line">		System.out.println(<span class="string">"b의 값 : "</span> + b);	<span class="comment">//20</span></span><br><span class="line">		</span><br><span class="line">		a = a + a;	<span class="comment">//재할당</span></span><br><span class="line">		System.out.println(<span class="string">"a의 값 : "</span> + a);	<span class="comment">//20</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">//</span></span><br><span class="line">		a += a;		<span class="comment">//a = a + a;</span></span><br><span class="line">		System.out.println(<span class="string">"a의 값 : "</span> + a);	<span class="comment">//40</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> x = <span class="number">10</span>;</span><br><span class="line">		x = x + <span class="number">100</span>;</span><br><span class="line">		System.out.println(<span class="string">"x의 값 : "</span> + x);	<span class="comment">//110</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> y = <span class="number">10</span>;</span><br><span class="line">		y += <span class="number">100</span>;</span><br><span class="line">		System.out.println(<span class="string">"y의 값 : "</span> + y);	<span class="comment">//110</span></span><br><span class="line">		</span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="7-3항연산자"><a href="#7-3항연산자" class="headerlink" title="7. 3항연산자"></a>7. 3항연산자</h2><ul>
+<li><code>3항연산자</code><br>  : 3개의 항으로 구성<br>  ▶ <code>조건식</code>을 작성할 경우 많이 편리<br>  <code>조건식 ? &quot;참값&quot; : &quot;거짓값&quot;;</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator07</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//3항 연산</span></span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">		String result = a == <span class="number">10</span> ? <span class="string">"맞다"</span> : <span class="string">"틀리다"</span>;</span><br><span class="line">		System.out.println(result);</span><br><span class="line">		System.out.println(a == <span class="number">10</span> ? <span class="string">"맞다"</span> : <span class="string">"틀리다"</span>);</span><br><span class="line">		</span><br><span class="line">		String str1 = <span class="string">"100"</span>;			<span class="comment">//문자 100</span></span><br><span class="line">		<span class="keyword">if</span>(str1 == <span class="string">"100"</span>) &#123; 			<span class="comment">//숫자 100 → "" 추가 → 문자 100</span></span><br><span class="line">			System.out.println(<span class="string">"맞습니다."</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			System.out.println(<span class="string">"틀립니다."</span>);</span><br><span class="line">		&#125;<span class="comment">//if()</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="특수기호문자-Escape-Sequence"><a href="#특수기호문자-Escape-Sequence" class="headerlink" title="특수기호문자(Escape Sequence)"></a>특수기호문자(Escape Sequence)</h2><ul>
+<li><code>특수기호문자(Escape Sequence)</code><br>  : 프로그램에서 사용되는 특수기호문자, <code>역슬래시(\)</code>를 먼저 입력하고 사용한다.<br>  ▶ <code>출력문</code>에 많이 사용 <ol>
+<li><code>\t</code> : 탭간격(기본 8칸 띄어쓰기)</li>
+<li><code>\n</code> : 줄바꿈(뉴라인)</li>
+<li><code>\b</code> : 백스페이스</li>
+<li><code>\r</code> : 행의 처음으로 커서를 이동</li>
+<li><code>\&#39;</code> : 작은따옴표를 표시</li>
+<li><code>\&quot;</code> : 큰따옴표를 표시</li>
+<li><code>\\</code> : <code>\</code>(역슬래시, root) 표시</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator08</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"1.HelloWorld"</span>);</span><br><span class="line">		System.out.println(<span class="string">"2.Hello"</span> + <span class="string">"\t"</span> + <span class="string">"World"</span>); <span class="comment">// \t : 탭간격(기본 8칸) </span></span><br><span class="line">								<span class="comment">//글꼴에 따라 띄어 쓴 정도가 다름</span></span><br><span class="line">		System.out.println(<span class="string">"3.Hello\tWorld"</span>); <span class="comment">//문자열 출력은 안에 연결해서 사용가능</span></span><br><span class="line">		System.out.println(<span class="string">"4.Hello"</span> + <span class="string">"\n"</span> + <span class="string">"World"</span>); <span class="comment">// \n : 줄바꿈(뉴라인)</span></span><br><span class="line">		System.out.println(<span class="string">"5.Hello"</span> + <span class="string">"\b"</span> + <span class="string">"World"</span>); <span class="comment">// \b : 백스페이스</span></span><br><span class="line">		System.out.println(<span class="string">"6.Hello"</span> + <span class="string">"\r"</span> + <span class="string">"World"</span>); <span class="comment">// \r : Carriage Return</span></span><br><span class="line">							<span class="comment">// 6.Hello : 행의 처음으로 커서를 이동</span></span><br><span class="line">							<span class="comment">// World   </span></span><br><span class="line">							<span class="comment">// = Worldlo </span></span><br><span class="line">		System.out.println(<span class="string">"7.Hello"</span> + <span class="string">"\'"</span> + <span class="string">"World"</span>);	<span class="comment">// \' : 작은따옴표를 표시 </span></span><br><span class="line">		System.out.println(<span class="string">"8.Hello"</span> + <span class="string">"\""</span> + <span class="string">"World"</span>);	<span class="comment">// \" : 큰따옴표를 표시 </span></span><br><span class="line">		System.out.println(<span class="string">"9.Hello"</span> + <span class="string">"\\"</span> + <span class="string">"World"</span>);	<span class="comment">// \\ : \(역슬래시, root) 표시</span></span><br><span class="line">		</span><br><span class="line">		System.out.println(<span class="string">"번호"</span> + <span class="string">"\t"</span> + <span class="string">"이름"</span> + <span class="string">"\t"</span> + <span class="string">"주소"</span>); </span><br><span class="line">		<span class="comment">// 아래 내용들이 깔끔하게 출력</span></span><br><span class="line">		System.out.println(<span class="string">"001"</span> + <span class="string">"\t"</span> + <span class="string">"홍길동"</span> + <span class="string">"\t"</span> + <span class="string">"광주시 서구 농성동"</span>);</span><br><span class="line">		System.out.println(<span class="string">"002"</span> + <span class="string">"\t"</span> + <span class="string">"허준"</span> + <span class="string">"\t"</span> + <span class="string">"광주시 남구 봉선동"</span>);</span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://user-images.githubusercontent.com/23150245/55808500-28e94200-5b1f-11e9-84b2-71c400403ec7.PNG" alt="08"></p>
+<h2 id="16진수-8진수"><a href="#16진수-8진수" class="headerlink" title="16진수, 8진수"></a>16진수, 8진수</h2><ul>
+<li><code>16진수</code> : 숫자 앞에 <code>0x</code>를 붙인다.</li>
+<li><code>8진수</code>  : 숫자 앞에 <code>0</code>을 붙인다.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator09</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">11</span>;	<span class="comment">//10진수</span></span><br><span class="line">		System.out.println(a);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> b = <span class="number">011</span>;	<span class="comment">//8진수</span></span><br><span class="line">		System.out.println(b);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> c = <span class="number">0x11</span>;	<span class="comment">//16진수</span></span><br><span class="line">		System.out.println(c);</span><br><span class="line"></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JAVA/" rel="tag"># JAVA</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/05/java02/" rel="next" title="JAVA기초 02.형변환(Casting)">
+                <i class="fa fa-chevron-left"></i> JAVA기초 02.형변환(Casting)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/08/1942/" rel="prev" title="19년 4월 2주차 Today I Learned">
+                19년 4월 2주차 Today I Learned <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            목차
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            흝어보기
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/fava.gif" alt="IngJin">
+            
+              <p class="site-author-name" itemprop="name">IngJin</p>
+              <div class="site-description motion-element" itemprop="description">잉진은 오늘도 코딩을 합니다.</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">포스트</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">카테고리</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">태그</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/IngJin" title="GitHub &rarr; https://github.com/IngJin" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:JH.spacejunk@gmail.com" title="E-Mail &rarr; mailto:JH.spacejunk@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.facebook.com/spacejunkk" title="Facebook &rarr; https://www.facebook.com/spacejunkk" rel="noopener" target="_blank"><i class="fa fa-fw fa-facebook"></i>Facebook</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://instagram.com/ing.jin" title="Instagram &rarr; https://instagram.com/ing.jin" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#연산"><span class="nav-number">1.</span> <span class="nav-text">연산</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-산술연산자"><span class="nav-number">2.</span> <span class="nav-text">1. 산술연산자</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-증감연산자"><span class="nav-number">3.</span> <span class="nav-text">2. 증감연산자</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-비트연산자"><span class="nav-number">4.</span> <span class="nav-text">3.비트연산자</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-비교연산자"><span class="nav-number">5.</span> <span class="nav-text">4.비교연산자</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-논리연산자"><span class="nav-number">6.</span> <span class="nav-text">5.논리연산자</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-대입연산자"><span class="nav-number">7.</span> <span class="nav-text">6.대입연산자</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-3항연산자"><span class="nav-number">8.</span> <span class="nav-text">7. 3항연산자</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#특수기호문자-Escape-Sequence"><span class="nav-number">9.</span> <span class="nav-text">특수기호문자(Escape Sequence)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16진수-8진수"><span class="nav-number">10.</span> <span class="nav-text">16진수, 8진수</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-leaf"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IngJin</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+  <script id="dsq-count-scr" src="https://ingjin.disqus.com/count.js" async></script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://ingjin.github.io/2019/04/07/java03/";
+    this.page.identifier = "2019/04/07/java03/";
+    this.page.title = 'JAVA기초 03.연산자(Operator)';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ingjin.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    loadComments();
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'manual') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
