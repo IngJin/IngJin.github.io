@@ -368,6 +368,217 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/09/java04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IngJin">
+      <meta itemprop="description" content="잉진은 오늘도 코딩을 합니다.">
+      <meta itemprop="image" content="/images/fava.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="잉로그">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/09/java04/" class="post-title-link" itemprop="url">JAVA기초 04. 조건문 ( if문 / Switch문 )</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-04-09 18:56:37" itemprop="dateCreated datePublished" datetime="2019-04-09T18:56:37+09:00">2019-04-09</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-04-11 23:11:08" itemprop="dateModified" datetime="2019-04-11T23:11:08+09:00">2019-04-11</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/04/09/java04/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/09/java04/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="조건문이란"><a href="#조건문이란" class="headerlink" title="조건문이란?"></a><code>조건문</code>이란?</h2><p>조건에 따라 코드의 실행 흐름을 다르게 동작하도록 제어하는 것</p>
+<h2 id="if문"><a href="#if문" class="headerlink" title="if문"></a>if문</h2><h3 id="if문-1"><a href="#if문-1" class="headerlink" title="if문"></a><code>if문</code></h3><p> : 조건을 판단하여 참일 경우에만 실행</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(조건식)&#123; <span class="comment">// 비교연산자 또는 논리연산자가 들어간다.</span></span><br><span class="line">	조건식이 참일때 실행되는 문장;</span><br><span class="line">&#125;<span class="comment">//if</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>실행되는 문장이 1줄이면 <code>{}</code>을 생략해도 된다. </li>
+<li><code>if(조건식) 실행문장;</code><em>(권장하진 않음)</em> </li>
+</ul>
+<h3 id="예제1"><a href="#예제1" class="headerlink" title="예제1"></a><code>예제1</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">If</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">		<span class="keyword">if</span>(a % <span class="number">2</span> == <span class="number">0</span>) &#123;	<span class="comment">// a를 2로 나눈 나머지 값이 0과 같다 : 짝수</span></span><br><span class="line">		System.out.println(<span class="string">"입력값은 "</span> + a + <span class="string">"입니다."</span>);</span><br><span class="line">		System.out.println(a + <span class="string">"은 짝수입니다."</span>);</span><br><span class="line">		&#125;<span class="comment">//if</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> b = <span class="number">9</span>;</span><br><span class="line">		<span class="keyword">if</span>(b % <span class="number">2</span> != <span class="number">0</span>) &#123;	<span class="comment">// b를 2로 나눈 나머지 값이 0과 같지 않다 : 홀수</span></span><br><span class="line">		System.out.println(<span class="string">"입력값은 "</span> + b + <span class="string">"입니다."</span> + <span class="string">"\n"</span> + b + <span class="string">"는 홀수입니다."</span>);</span><br><span class="line">		&#125;<span class="comment">//if</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="if-else문"><a href="#if-else문" class="headerlink" title="if~else문"></a>if~else문</h2><h3 id="if-else문-1"><a href="#if-else문-1" class="headerlink" title="if~else문"></a><code>if~else문</code></h3><p> : 조건을 판단하여 참일때 또는 거짓일때의 명령을 실행</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(조건식)&#123;</span><br><span class="line">	참일때 실행되는 문장;	<span class="comment">//여기까지 수행되면 단순 if문</span></span><br><span class="line">&#125; <span class="keyword">else</span>&#123;</span><br><span class="line">	거짓일때 실행되는 문장;</span><br><span class="line">&#125;<span class="comment">//if</span></span><br></pre></td></tr></table></figure>
+<h3 id="예제1-1"><a href="#예제1-1" class="headerlink" title="예제1"></a><code>예제1</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">If_else</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">		<span class="keyword">if</span>(a % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">			System.out.println(<span class="string">"짝수입니다."</span>); 	<span class="comment">//조건식이 true</span></span><br><span class="line">		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">			System.out.println(<span class="string">"홀수입니다."</span>);	<span class="comment">//조건식이 false</span></span><br><span class="line">		&#125;<span class="comment">//if</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h3 id="예제2"><a href="#예제2" class="headerlink" title="예제2"></a><code>예제2</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">If_else</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//성별코드(code) 값이 1 또는 3이면 '남자', 그외에는 '여자'로 출력</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> code = <span class="number">3</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">/* if(code != 2) &#123;</span></span><br><span class="line"><span class="comment">			System.out.println("남자입니다.");</span></span><br><span class="line"><span class="comment">		&#125; else &#123;</span></span><br><span class="line"><span class="comment">			System.out.println("여자입니다.");</span></span><br><span class="line"><span class="comment">		&#125;*/</span> </span><br><span class="line">		<span class="comment">//만약 이렇게 코드를 만들면 1,3뿐 아니라 4를 썼을때도 남자가 나온다.</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(code == <span class="number">1</span> || code == <span class="number">3</span>) &#123;</span><br><span class="line">			System.out.println(<span class="string">"남자입니다."</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			System.out.println(<span class="string">"여자입니다."</span>);</span><br><span class="line">		&#125;<span class="comment">//if</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="else-if문"><a href="#else-if문" class="headerlink" title="else~if문"></a>else~if문</h2><h3 id="else-if문-1"><a href="#else-if문-1" class="headerlink" title="else~if문"></a><code>else~if문</code></h3><p> : 여러개의 조건을 판단하여, 해당 조건을 만족할 경우 실행</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(조건식<span class="number">1</span>)&#123;</span><br><span class="line">	조건식<span class="number">1</span>이 참일때 실행되는 문장;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(조건식<span class="number">2</span>)&#123;</span><br><span class="line">	조건식<span class="number">2</span>가 참일때 실행되는 문장;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(조건식N)&#123;</span><br><span class="line">	조건식N이 참일때 실행되는 문장;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	거짓일때 실행되는 문장;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="예제1-2"><a href="#예제1-2" class="headerlink" title="예제1"></a><code>예제1</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Else_if</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> score = <span class="number">87</span>;	</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(score &gt;= <span class="number">90</span>) &#123;</span><br><span class="line">			System.out.println(<span class="string">"A학점"</span>);</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(score &gt;= <span class="number">80</span>) &#123;</span><br><span class="line">			System.out.println(<span class="string">"B학점"</span>);</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(score &gt;= <span class="number">70</span>) &#123;</span><br><span class="line">			System.out.println(<span class="string">"C학점"</span>);</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(score &gt;= <span class="number">60</span>) &#123;</span><br><span class="line">			System.out.println(<span class="string">"D학점"</span>);</span><br><span class="line">		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">			System.out.println(<span class="string">"F학점"</span>);</span><br><span class="line">		&#125;<span class="comment">//if</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h3 id="예제2-1"><a href="#예제2-1" class="headerlink" title="예제2"></a><code>예제2</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Else_if</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//성별코드(code)가 1이면 '남자', 2이면 '여자', 3이면 '남자', 4이면 '여자' </span></span><br><span class="line">		<span class="comment">//그 외에는 오류메세지("성별코드가 잘못입력되었습니다")출력</span></span><br><span class="line">		<span class="keyword">int</span> code = <span class="number">3</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(code == <span class="number">1</span> || code == <span class="number">3</span>) &#123;</span><br><span class="line">			System.out.println(<span class="string">"남자입니다."</span>);</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(code == <span class="number">2</span> || code == <span class="number">4</span>) &#123;</span><br><span class="line">			System.out.println(<span class="string">"여자입니다."</span>);</span><br><span class="line">		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">			System.out.println(<span class="string">"성별코드 오류"</span>);</span><br><span class="line">		&#125;<span class="comment">//if</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="중첩-if문"><a href="#중첩-if문" class="headerlink" title="중첩 if문"></a>중첩 if문</h2><h3 id="중첩-if문-1"><a href="#중첩-if문-1" class="headerlink" title="중첩 if문"></a><code>중첩 if문</code></h3><p> : if문 안에 다른 if문이 있는 문장</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(조건식A)&#123;</span><br><span class="line">	<span class="keyword">if</span>(조건식<span class="number">1</span>)&#123;</span><br><span class="line">		조건식A를 만족한 상태에서 조건식<span class="number">1</span>이 참일때 실행되는 문장;</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(조건식<span class="number">2</span>)&#123;</span><br><span class="line">		조건식A를 만족한 상태에서 조건식<span class="number">2</span>가 참일때 실행되는 문장;</span><br><span class="line">	&#125;<span class="comment">//if</span></span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(조건식B)&#123;</span><br><span class="line">	조건식 B가 참일때 실행되는 문장;</span><br><span class="line">&#125;<span class="comment">//if</span></span><br></pre></td></tr></table></figure>
+<h3 id="예제1-3"><a href="#예제1-3" class="headerlink" title="예제1"></a><code>예제1</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">If_if</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> score = -<span class="number">87</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(score &gt;= <span class="number">0</span> &amp;&amp; score &lt;= <span class="number">100</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span>(score &gt;= <span class="number">90</span>) &#123;</span><br><span class="line">				System.out.println(<span class="string">"A학점"</span>);</span><br><span class="line">			&#125;<span class="keyword">else</span> <span class="keyword">if</span>(score &gt;= <span class="number">80</span>) &#123;</span><br><span class="line">				System.out.println(<span class="string">"B학점"</span>);</span><br><span class="line">			&#125;<span class="keyword">else</span> <span class="keyword">if</span>(score &gt;= <span class="number">70</span>) &#123;</span><br><span class="line">				System.out.println(<span class="string">"C학점"</span>);</span><br><span class="line">			&#125;<span class="keyword">else</span> <span class="keyword">if</span>(score &gt;= <span class="number">60</span>) &#123;</span><br><span class="line">				System.out.println(<span class="string">"D학점"</span>);</span><br><span class="line">			&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">				System.out.println(<span class="string">"F학점"</span>);</span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">			System.out.println(<span class="string">"점수입력오류"</span>);</span><br><span class="line">		&#125;<span class="comment">//else</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="switch-case문"><a href="#switch-case문" class="headerlink" title="switch~case문"></a>switch~case문</h2><h3 id="switch-case문-1"><a href="#switch-case문-1" class="headerlink" title="switch~case문"></a><code>switch~case문</code></h3><p> : 다중 if문을 간략하게 표현</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(기준값)&#123;</span><br><span class="line">	<span class="keyword">case</span>값<span class="number">1</span> :</span><br><span class="line">		값<span class="number">1</span>이 참일때 실행되는 문장;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span>값<span class="number">2</span> :</span><br><span class="line">		값<span class="number">2</span>가 참일때 실행되는 문장;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span>값N :</span><br><span class="line">		값N이 참일때 실행되는 문장;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">default</span> :</span><br><span class="line">		거짓일때 실행되는 문장;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>기준값</code>, <code>비교값</code>(<code>값1</code>,<code>값2</code>,<code>값N</code>)은 <code>정수형</code>(<code>수치형</code>)의 자료이여야 한다.</li>
+<li>실행문 뒤에는 반드시 <code>break;</code> 입력</li>
+</ul>
+<h3 id="예제1-4"><a href="#예제1-4" class="headerlink" title="예제1"></a><code>예제1</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Switch_case</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> score = <span class="number">87</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">switch</span>(score / <span class="number">10</span>) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">10</span> : <span class="comment">//100</span></span><br><span class="line">			<span class="comment">// System.out.println("A학점");</span></span><br><span class="line">			<span class="comment">// break; 이렇게해도 가능 case 9 : break;에서 값나옴 </span></span><br><span class="line">		<span class="keyword">case</span> <span class="number">9</span> : <span class="comment">//90점 ~ 99점</span></span><br><span class="line">			System.out.println(<span class="string">"A학점"</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">8</span> : <span class="comment">//80점 ~ 89점</span></span><br><span class="line">			System.out.println(<span class="string">"B학점"</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">7</span> : <span class="comment">//70점 ~ 79점</span></span><br><span class="line">			System.out.println(<span class="string">"C학점"</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">6</span> : <span class="comment">//60점 ~ 69점</span></span><br><span class="line">			System.out.println(<span class="string">"D학점"</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span> : <span class="comment">//60점 미만</span></span><br><span class="line">			System.out.println(<span class="string">"F학점"</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;<span class="comment">//switch</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/08/1942/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -679,7 +890,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2019-04-09 23:31:37" itemprop="dateModified" datetime="2019-04-09T23:31:37+09:00">2019-04-09</time>
+                <time title="Updated at: 2019-04-10 00:13:26" itemprop="dateModified" datetime="2019-04-10T00:13:26+09:00">2019-04-10</time>
               
             
           </span>
@@ -2305,7 +2516,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
