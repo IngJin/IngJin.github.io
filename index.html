@@ -413,12 +413,24 @@
                 
               
 
-              <time title="Post created: 2019-04-15 18:56:37 / Updated at: 22:12:31" itemprop="dateCreated datePublished" datetime="2019-04-15T18:56:37+09:00">2019-04-15</time>
+              <time title="Post created: 2019-04-15 18:56:37" itemprop="dateCreated datePublished" datetime="2019-04-15T18:56:37+09:00">2019-04-15</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-04-16 20:58:34" itemprop="dateModified" datetime="2019-04-16T20:58:34+09:00">2019-04-16</time>
               
             
           </span>
@@ -485,7 +497,7 @@
       
         
           
-            <h2 id="190408-TIL"><a href="#190408-TIL" class="headerlink" title="190408 TIL"></a>190408 TIL</h2><ul>
+            <h2 id="190415-TIL"><a href="#190415-TIL" class="headerlink" title="190415 TIL"></a>190415 TIL</h2><ul>
 <li><p><code>DB</code> <code>오라클/SQL</code><br>: <code>outer join</code>, <code>self join</code></p>
 </li>
 <li><p><code>Method(메소드)</code><br>: 객체(클래스)가 가지고 있는 행위정보를 표현하는 것(동작, 기능) → 함수(Function)</p>
@@ -496,6 +508,19 @@
 </li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Ex_Method01</span> </span>&#123;</span><br><span class="line">	<span class="comment">//getSum() 메소드에 10과 20을 매개변수로 보내는 호출문 작성</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">10</span>, b =<span class="number">20</span>;	<span class="comment">//getSum()메소드를 보낼 매개변수를 초기화</span></span><br><span class="line">		getSum(a,b);	<span class="comment">//getSum()메소드 호출문 → 실인수</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">//2개의 정수를 매개변수로 받아 합(sum)을 구하여 출력하는 메소드(getSum())를 정의</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getSum</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123; <span class="comment">//getSum()메소드를 정의 → 가인수</span></span><br><span class="line">		<span class="keyword">int</span> sum = a + b;</span><br><span class="line">		System.out.println(<span class="string">"첫 번째 인수 : "</span> + a);</span><br><span class="line">		System.out.println(<span class="string">"두 번째 인수 : "</span> + b);</span><br><span class="line">		System.out.println(<span class="string">"두 인수의 합 : "</span> + sum);</span><br><span class="line">	&#125;<span class="comment">//getSum()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="190416-TIL"><a href="#190416-TIL" class="headerlink" title="190416 TIL"></a>190416 TIL</h2><ul>
+<li><code>DB</code> <code>오라클/SQL</code><br>: 국제표준 조인형식 : <code>ANSI JOIN</code> 형식<ol>
+<li>equi join : <code>inner join</code></li>
+<li>outer join : `left/right outer join</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p><code>예외(exception)</code><br>: 실행 중 발생하는 에러는 컴파일러가 알 수 없다.<br><strong>실행중 에러 발생 시 예외를 발생시켜 예외 처리함</strong><br>(예외를 처리하지 않으면 예외가 발생한 프로그램은 강제 종료)</p>
+</li>
+<li><p><code>예외처리문</code><br>: <code>try-catch-finally문</code> 사용<br><code>finally</code>는 생략가능 </p>
+</li>
+</ul>
 
           
         
