@@ -368,6 +368,274 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/03/29/190329/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IngJin">
+      <meta itemprop="description" content="잉진은 오늘도 코딩을 합니다.">
+      <meta itemprop="image" content="/images/fava.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="잉로그">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/29/190329/" class="post-title-link" itemprop="url">19년 3월 5주차 Today I Learned</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-03-29 18:56:37" itemprop="dateCreated datePublished" datetime="2019-03-29T18:56:37+09:00">2019-03-29</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-03-31 22:08:19" itemprop="dateModified" datetime="2019-03-31T22:08:19+09:00">2019-03-31</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/TIL/" itemprop="url" rel="index"><span itemprop="name">TIL</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/03/29/190329/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/29/190329/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="190325-TIL"><a href="#190325-TIL" class="headerlink" title="190325 TIL"></a>190325 TIL</h2><ul>
+<li><p>국비과정 사전예습 시작 </p>
+<blockquote>
+<p>19.03.25~19.03.29</p>
+<blockquote>
+<p>09:20 ~ 12:10 (월~금)  </p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>블로그에 <code>Disqus</code>를 연동<br>이제 나도 댓글을 남길 수 있다.  </p>
+<p><img src="https://user-images.githubusercontent.com/23150245/54912799-c3009600-4f34-11e9-8ea6-9e48ceabbb72.PNG" alt="disq">  </p>
+</li>
+<li><p><strong><code>Disqus</code> 연동 요약</strong><br><code>Disqus</code>에 <a href="https://disqus.com/" target="_blank" rel="noopener">가입</a>하여 <code>shortname</code>을 설정 한 뒤<br><em>themes/note</em> 경로의 <code>_config.yml</code> 에서<br><code>#Disqus</code>부분을 다음과 같이 수정한다.</p>
+<pre><code class="yml"><span class="comment">#Disqus</span>
+<span class="attr">disqus:</span> 
+<span class="attr">enable:</span> <span class="literal">true</span> 
+<span class="attr">shortname:</span> <span class="string">ingjin</span> <span class="comment">#shortname 삽입</span>
+<span class="attr">count:</span> <span class="literal">true</span>
+<span class="attr">lazyload:</span> <span class="literal">false</span>
+</code></pre>
+</li>
+<li><p>그렇다, 오늘은 별거 안했다.  </p>
+</li>
+</ul>
+<h2 id="190326-TIL"><a href="#190326-TIL" class="headerlink" title="190326 TIL"></a>190326 TIL</h2><ul>
+<li>Java 개발 환경 구축  <ol>
+<li><code>JDK</code> 설치  </li>
+<li><code>JAVA_HOME</code> 환경 변수 생성</li>
+<li><code>PATH</code> 환경 변수 추가<br><strong><code>;%JAVA_HOME%\bin;</code></strong></li>
+<li><code>CLASSPATH</code> 환경 변수 생성<br><strong><code>.;%JAVA_HOME%\lib;</code></strong> </li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><code>CLASSPATH?</code><ul>
+<li>컴퓨터 어딘가에 존재하는<br>클래스 파일을 사용하기 위한 방법. </li>
+<li>미지정시 현재 디렉토리에서만<br>필요한 클래스를 가져다 쓴다.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>코드블럭 라인넘버가 나온다.<br>어제는 왜 안나온거지..?<pre><code class="java"><span class="function">function <span class="title">add</span><span class="params">(x, y)</span> </span>{
+<span class="keyword">return</span> x + y
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="190327-TIL"><a href="#190327-TIL" class="headerlink" title="190327 TIL"></a>190327 TIL</h2><ul>
+<li><strong><code>예비군 기본훈련</code></strong> 다녀왔습니다. </li>
+<li><p><code>Markdown</code> 이미지 크기 조절<br><code>&lt;img&gt;태그</code>가 더 편한것 같은 이 느낌</p>
+<pre><code class="css">&lt;img src="이미지 url" width="원하는 크기"&gt;
+</code></pre>
+<ol>
+<li><code>width=&quot;800&quot;</code><br><img src="https://user-images.githubusercontent.com/23150245/55076571-2297a680-50d9-11e9-8e23-53f5da293b7e.jpg" width="800"></li>
+<li><code>width=&quot;400&quot;</code><br><img src="https://user-images.githubusercontent.com/23150245/55076571-2297a680-50d9-11e9-8e23-53f5da293b7e.jpg" width="400"></li>
+</ol>
+<p><em>사실 마크다운으로 수정하면</em><br><em>자꾸 엑박이 뜬다..</em><br><em>이유가 뭘까..?</em></p>
+</li>
+</ul>
+<h2 id="190328-TIL"><a href="#190328-TIL" class="headerlink" title="190328 TIL"></a>190328 TIL</h2><ul>
+<li><p><code>java</code>파일을 <code>컴파일</code>하면<br><code>class</code>파일이 생성된다.  </p>
+<blockquote>
+<p><code>컴파일</code><br>코드를 컴퓨터가 읽을 수 있도록 변환하는 과정.  </p>
+</blockquote>
+<blockquote>
+<p><code>패키지</code><br>서로 관련이 있는 클래스 또는 인터페이스들을<br>하나로 묶어 놓은 묶음.</p>
+</blockquote>
+<ul>
+<li><code>syso</code> 입력 후 <code>ctrl</code>+<code>space</code><br>= <code>System.out.println()</code> 생성  </li>
+</ul>
+</li>
+</ul>
+<h2 id="190329-TIL"><a href="#190329-TIL" class="headerlink" title="190329 TIL"></a>190329 TIL</h2><ul>
+<li><p><code>이클립스(Eclipse)</code>에서<br>프로젝트를 불러오는 방법<br>= <code>Import</code>하는 방법</p>
+</li>
+<li><p><code>헝가리안 표기법</code>  </p>
+<blockquote>
+<p>변수 및 함수의 인자 이름 앞에<br>데이터 타입을 명시하는 코딩 규칙</p>
+</blockquote>
+<p><em>요즘 안쓴다고 한다.</em></p>
+</li>
+<li>사전학습이 끝났다.<br>생각해보니 뭐 안했다.</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/03/24/190324/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -769,7 +1037,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>

@@ -368,6 +368,213 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/20/java06/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IngJin">
+      <meta itemprop="description" content="잉진은 오늘도 코딩을 합니다.">
+      <meta itemprop="image" content="/images/fava.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="잉로그">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/20/java06/" class="post-title-link" itemprop="url">JAVA기초 06. Scanner 클래스</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-04-20 18:56:37" itemprop="dateCreated datePublished" datetime="2019-04-20T18:56:37+09:00">2019-04-20</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-04-21 00:37:58" itemprop="dateModified" datetime="2019-04-21T00:37:58+09:00">2019-04-21</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/04/20/java06/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/20/java06/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Scanner-클래스란"><a href="#Scanner-클래스란" class="headerlink" title="Scanner 클래스란?"></a><code>Scanner 클래스</code>란?</h2><p>자바에서 <strong>입력</strong>을 받을 때 사용하는 클래스<br>정수,실수,문자열을 읽어올 수 있다.</p>
+<h2 id="Scanner의-사용법"><a href="#Scanner의-사용법" class="headerlink" title="Scanner의 사용법"></a><code>Scanner</code>의 사용법</h2><ol>
+<li>import를 통한 외부 클래스 호출</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>Scanner 객체 생성</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>Scanner 닫기</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc.close();</span><br></pre></td></tr></table></figure>
+<h2 id="Scanner의-메소드"><a href="#Scanner의-메소드" class="headerlink" title="Scanner의 메소드"></a><code>Scanner</code>의 메소드</h2><ul>
+<li><code>next()</code> : 공백 이전의 문자열 받기</li>
+<li><code>nextInt()</code> : 공백 이전의 정수 받기</li>
+<li><code>nextDouble()</code> : 공백 이전의 실수 받기</li>
+<li><code>nextLine()</code> : 문자열 전체 입력 받기</li>
+</ul>
+<h2 id="예제"><a href="#예제" class="headerlink" title="예제"></a>예제</h2><h3 id="예제1"><a href="#예제1" class="headerlink" title="예제1"></a>예제1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Ex_scanner</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//입력창에서 점수(a)를 입력받은 후 학점을 출력하는 프로그램 </span></span><br><span class="line">		<span class="comment">//▶ Scanner(입력),if(학점)</span></span><br><span class="line">		<span class="comment">//Scanner 객체 생성 : new Scanner(); → System.in : 키보드로부터 입력</span></span><br><span class="line">		</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">while</span>(<span class="keyword">true</span>) &#123; <span class="comment">//무한반복을 위해서</span></span><br><span class="line">			System.out.print(<span class="string">"점수를 입력하세요."</span>);	</span><br><span class="line">			<span class="comment">//블럭킹 상태 : 키보드로부터 입력을 대기하는 상태</span></span><br><span class="line">			<span class="keyword">int</span> a = sc.nextInt();</span><br><span class="line">			System.out.println(<span class="string">"입력하신 점수는 "</span> + a +<span class="string">"점 입니다."</span>);</span><br><span class="line">			<span class="keyword">if</span>(a &gt;= <span class="number">0</span> &amp;&amp; a &lt;= <span class="number">100</span>) &#123; 		</span><br><span class="line">				<span class="keyword">if</span>(a &gt;= <span class="number">90</span>) &#123;</span><br><span class="line">					System.out.println(<span class="string">"A학점입니다."</span>);</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span> (a &gt;= <span class="number">80</span>) &#123;</span><br><span class="line">					System.out.println(<span class="string">"B학점입니다."</span>);</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span> (a &gt;= <span class="number">70</span>) &#123;</span><br><span class="line">					System.out.println(<span class="string">"C학점입니다."</span>);</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span>(a &gt;= <span class="number">80</span>) &#123;</span><br><span class="line">					System.out.println(<span class="string">"D학점입니다."</span>);</span><br><span class="line">				&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">					System.out.println(<span class="string">"F학점입니다."</span>);</span><br><span class="line">				&#125;<span class="comment">//if	</span></span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">				System.out.println(<span class="string">"점수를 잘못입력하셨습니다."</span>);</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">		&#125;<span class="comment">//while</span></span><br><span class="line">		sc.close();</span><br><span class="line">	&#125;<span class="comment">//main</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h3 id="예제2"><a href="#예제2" class="headerlink" title="예제2"></a>예제2</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test_scanner</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 사용자로부터 출력하고 싶은 구구단을 입력(dan)받는다. ▶ Scanner</span></span><br><span class="line">		<span class="comment">// 입력받은 단의 구구단을 출력▶반복문(for)</span></span><br><span class="line">		<span class="comment">// 단, 입력받은 단의 범위는 2단부터 9단까지이며 ▶ if</span></span><br><span class="line">		<span class="comment">// 그외의 단이 입력되면 오류메세지를 출력하고 재입력받는다. while, continue</span></span><br><span class="line"></span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">			System.out.print(<span class="string">"출력하고 싶은 단를 입력하세요."</span>); <span class="comment">//블럭킹</span></span><br><span class="line">			<span class="keyword">int</span> dan = sc.nextInt();</span><br><span class="line">			System.out.println(dan + <span class="string">"단을 츌력합니다."</span>);</span><br><span class="line">			<span class="keyword">if</span> ( <span class="number">0</span> &lt; dan &amp;&amp; dan &lt; <span class="number">10</span>) &#123;</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">9</span>; i++) &#123;</span><br><span class="line">					<span class="keyword">if</span> (dan * i &lt; <span class="number">10</span>) &#123;</span><br><span class="line">						System.out.println(dan + <span class="string">"X"</span> + i + <span class="string">"=0"</span> + (dan*i));</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						System.out.println(dan + <span class="string">"X"</span> + i + <span class="string">"="</span> + (dan*i));</span><br><span class="line">					&#125;<span class="comment">//if</span></span><br><span class="line">				&#125;<span class="comment">//for</span></span><br><span class="line">				<span class="keyword">break</span>; <span class="comment">//while문 탈출용</span></span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				System.out.println(<span class="string">"2~9사이의 단수를 입력하세요."</span>);</span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">		&#125; <span class="comment">// while</span></span><br><span class="line"> 		sc.close(); <span class="comment">//while 뒤 스캐너를 닫는것</span></span><br><span class="line">	&#125;<span class="comment">// main</span></span><br><span class="line">&#125;<span class="comment">// class</span></span><br></pre></td></tr></table></figure>
+<h3 id="예제3"><a href="#예제3" class="headerlink" title="예제3"></a>예제3</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test_scanner_operator</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//두 수를 입력(su1,su2)받은 후에, 사칙연산을 수행하고 결과를 출력</span></span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		System.out.print(<span class="string">"첫 번째 수를 입력하세요 : "</span>);</span><br><span class="line">		<span class="keyword">int</span> su1 = Integer.parseInt(sc.nextLine());</span><br><span class="line">		System.out.print(<span class="string">"두 번쨰 수를 입력하세요 : "</span>);</span><br><span class="line">		<span class="keyword">int</span> su2 = Integer.parseInt(sc.nextLine());</span><br><span class="line">		sc.close();</span><br><span class="line">		</span><br><span class="line">		System.out.println(<span class="string">"첫 번째 수 : "</span> + su1);</span><br><span class="line">		System.out.println(<span class="string">"두 번쨰 수 : "</span> + su2);</span><br><span class="line">		System.out.println(<span class="string">"덧셈의 결과 :"</span> + (su1 + su2));</span><br><span class="line">		System.out.println(<span class="string">"뺼셈의 결과 :"</span> + (su1 - su2));</span><br><span class="line">		System.out.println(<span class="string">"곱셈의 결과 :"</span> + (su1 * su2));</span><br><span class="line">		System.out.println(<span class="string">"나눗셈의 결과 :"</span> + (su1/su2)); <span class="comment">//나눗셈은 실수로 나올 수 있다.</span></span><br><span class="line">		System.out.println(<span class="string">"나눗셈의 결과 :"</span> + (<span class="keyword">double</span>)(su1/su2));</span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/15/1943/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -610,195 +817,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/11/java05b/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IngJin">
-      <meta itemprop="description" content="잉진은 오늘도 코딩을 합니다.">
-      <meta itemprop="image" content="/images/fava.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="잉로그">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/11/java05b/" class="post-title-link" itemprop="url">JAVA기초 05-2. 반복문 응용</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">작성일</span>
-              
-
-              
-                
-              
-
-              <time title="Post created: 2019-04-11 18:56:37" itemprop="dateCreated datePublished" datetime="2019-04-11T18:56:37+09:00">2019-04-11</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Updated at: 2019-04-14 23:30:11" itemprop="dateModified" datetime="2019-04-14T23:30:11+09:00">2019-04-14</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">댓글: </span>
-                <a href="/2019/04/11/java05b/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/11/java05b/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="별찍기-1"><a href="#별찍기-1" class="headerlink" title="별찍기 1"></a>별찍기 1</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Ex_for_for</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123; 	<span class="comment">//for i : 1부터 5까지 반복 	</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; j++) &#123; 	<span class="comment">//for j : 1부터 i까지 반복</span></span><br><span class="line">				System.out.print(<span class="string">"("</span> + i + <span class="string">","</span> + j + <span class="string">")"</span>);	</span><br><span class="line">			&#125;<span class="comment">//for j</span></span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;<span class="comment">//for i</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		 ★</span></span><br><span class="line"><span class="comment">		 ★★ </span></span><br><span class="line"><span class="comment">		 ★ ★ ★</span></span><br><span class="line"><span class="comment">		 ★ ★ ★ ★ </span></span><br><span class="line"><span class="comment">		 ★ ★ ★ ★ ★ </span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		 </span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; j++) &#123; </span><br><span class="line">				System.out.print(<span class="string">"★ "</span>);</span><br><span class="line">			&#125;<span class="comment">//for j</span></span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;<span class="comment">//for i</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
-<h2 id="별찍기-2"><a href="#별찍기-2" class="headerlink" title="별찍기 2"></a>별찍기 2</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test_for_for</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		 ★ ★ ★ ★ ★  </span></span><br><span class="line"><span class="comment">		 ★ ★ ★ ★</span></span><br><span class="line"><span class="comment">		 ★ ★ ★ </span></span><br><span class="line"><span class="comment">		 ★ ★ </span></span><br><span class="line"><span class="comment">		 ★ </span></span><br><span class="line"><span class="comment">		 */</span> </span><br><span class="line">		 </span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123; <span class="comment">//for (int i = 5; i &gt;= 1; i--)</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">5</span>; j &gt;= i; j--) &#123; <span class="comment">//for (int j = 1; j &lt;= i; j++)</span></span><br><span class="line">				<span class="comment">// System.out.print("(" + i + ","+ j + ")");</span></span><br><span class="line">				<span class="comment">/*</span></span><br><span class="line"><span class="comment">				(1,5)(1,4)(1,3)(1,2)(1,1) 	|(5,1)(5,2)(5,3)(5,4)(5,5)</span></span><br><span class="line"><span class="comment">				(2,5)(2,4)(2,3)(2,2)		|(4,1)(4,2)(4,3)(4,4)</span></span><br><span class="line"><span class="comment">				(3,5)(3,4)(3,3)			|(3,1)(3,2)(3,3)</span></span><br><span class="line"><span class="comment">				(4,5)(4,4)			|(2,1)(2,2)</span></span><br><span class="line"><span class="comment">				(5,5) 				|(1,1)</span></span><br><span class="line"><span class="comment">				 */</span></span><br><span class="line">				System.out.print(<span class="string">"★ "</span>);</span><br><span class="line">			&#125;<span class="comment">//for j</span></span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;<span class="comment">//for i</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
-<h2 id="구구단-1"><a href="#구구단-1" class="headerlink" title="구구단 1"></a>구구단 1</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Ex_gugudan</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= <span class="number">9</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= <span class="number">9</span>; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(i*j &lt; <span class="number">10</span>) &#123;</span><br><span class="line">					System.out.print(i + <span class="string">"X"</span> + j + <span class="string">"=0"</span> + (i*j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125;<span class="keyword">else</span> &#123;<span class="comment">//for j</span></span><br><span class="line">				System.out.print(i + <span class="string">"X"</span> + j + <span class="string">"="</span> + (i*j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125;<span class="comment">//if</span></span><br><span class="line">			&#125;<span class="comment">//for j</span></span><br><span class="line">			System.out.println();	<span class="comment">//j끝나면 줄바꿈</span></span><br><span class="line">		&#125;<span class="comment">//for i</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		2X1=02	2X2=04	2X3=06	2X4=08	2X5=10	2X6=12	2X7=14	2X8=16	2X9=18	</span></span><br><span class="line"><span class="comment">		3X1=03	3X2=06	3X3=09	3X4=12	3X5=15	3X6=18	3X7=21	3X8=24	3X9=27	</span></span><br><span class="line"><span class="comment">		4X1=04	4X2=08	4X3=12	4X4=16	4X5=20	4X6=24	4X7=28	4X8=32	4X9=36	</span></span><br><span class="line"><span class="comment">		5X1=05	5X2=10	5X3=15	5X4=20	5X5=25	5X6=30	5X7=35	5X8=40	5X9=45	</span></span><br><span class="line"><span class="comment">		6X1=06	6X2=12	6X3=18	6X4=24	6X5=30	6X6=36	6X7=42	6X8=48	6X9=54	</span></span><br><span class="line"><span class="comment">		7X1=07	7X2=14	7X3=21	7X4=28	7X5=35	7X6=42	7X7=49	7X8=56	7X9=63	</span></span><br><span class="line"><span class="comment">		8X1=08	8X2=16	8X3=24	8X4=32	8X5=40	8X6=48	8X7=56	8X8=64	8X9=72	</span></span><br><span class="line"><span class="comment">		9X1=09	9X2=18	9X3=27	9X4=36	9X5=45	9X6=54	9X7=63	9X8=72	9X9=81	</span></span><br><span class="line"><span class="comment">		*/</span></span><br><span class="line">		</span><br><span class="line">		System.out.println(<span class="string">"======================================================="</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">9</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">2</span>; j &lt;= <span class="number">9</span>; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(i*j &lt; <span class="number">10</span>) &#123;</span><br><span class="line">					System.out.print(j + <span class="string">"X"</span> + i + <span class="string">"=0"</span> + (i*j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">					System.out.print(j + <span class="string">"X"</span> + i + <span class="string">"="</span> + (i*j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125;<span class="comment">//if</span></span><br><span class="line">			&#125;<span class="comment">//for j</span></span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;<span class="comment">// for i</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		2X1=02	3X1=03	4X1=04	5X1=05	6X1=06	7X1=07	8X1=08	9X1=09	</span></span><br><span class="line"><span class="comment">		2X2=04	3X2=06	4X2=08	5X2=10	6X2=12	7X2=14	8X2=16	9X2=18	</span></span><br><span class="line"><span class="comment">		2X3=06	3X3=09	4X3=12	5X3=15	6X3=18	7X3=21	8X3=24	9X3=27	</span></span><br><span class="line"><span class="comment">		2X4=08	3X4=12	4X4=16	5X4=20	6X4=24	7X4=28	8X4=32	9X4=36	</span></span><br><span class="line"><span class="comment">		2X5=10	3X5=15	4X5=20	5X5=25	6X5=30	7X5=35	8X5=40	9X5=45	</span></span><br><span class="line"><span class="comment">		2X6=12	3X6=18	4X6=24	5X6=30	6X6=36	7X6=42	8X6=48	9X6=54	</span></span><br><span class="line"><span class="comment">		2X7=14	3X7=21	4X7=28	5X7=35	6X7=42	7X7=49	8X7=56	9X7=63	</span></span><br><span class="line"><span class="comment">		2X8=16	3X8=24	4X8=32	5X8=40	6X8=48	7X8=56	8X8=64	9X8=72	</span></span><br><span class="line"><span class="comment">		2X9=18	3X9=27	4X9=36	5X9=45	6X9=54	7X9=63	8X9=72	9X9=81	</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
-<h2 id="구구단-2"><a href="#구구단-2" class="headerlink" title="구구단 2"></a>구구단 2</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test_gugudan</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		 * 2X1=02 3X1=03 4X1=04 5X1=05 6X1=06 7X1=07 8X1=08 9X1=09 2X2=04 3X2=06 4X2=08</span></span><br><span class="line"><span class="comment">		 * 5X2=10 6X2=12 7X2=14 8X2=16 9X2=18 2X3=06 3X3=09 4X3=12 5X3=15 6X3=18 7X3=21</span></span><br><span class="line"><span class="comment">		 * 8X3=24 9X3=27 2X4=08 3X4=12 4X4=16 5X4=20 6X4=24 7X4=28 8X4=32 9X4=36 2X5=10</span></span><br><span class="line"><span class="comment">		 * 3X5=15 4X5=20 5X5=25 6X5=30 7X5=35 8X5=40 9X5=45 2X6=12 3X6=18 4X6=24 5X6=30</span></span><br><span class="line"><span class="comment">		 * 6X6=36 7X6=42 8X6=48 9X6=54 2X7=14 3X7=21 4X7=28 5X7=35 6X7=42 7X7=49 8X7=56</span></span><br><span class="line"><span class="comment">		 * 9X7=63 2X8=16 3X8=24 4X8=32 5X8=40 6X8=48 7X8=56 8X8=64 9X8=72 2X9=18 3X9=27</span></span><br><span class="line"><span class="comment">		 * 4X9=36 5X9=45 6X9=54 7X9=63 8X9=72 9X9=81</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">// ① for문</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">9</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">2</span>; j &lt;= <span class="number">9</span>; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (i * j &lt; <span class="number">10</span>) &#123;</span><br><span class="line">					System.out.print(j + <span class="string">"X"</span> + i + <span class="string">"=0"</span> + (i * j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					System.out.print(j + <span class="string">"X"</span> + i + <span class="string">"="</span> + (i * j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125; <span class="comment">// if</span></span><br><span class="line">			&#125; <span class="comment">// for j</span></span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125; <span class="comment">// for i</span></span><br><span class="line">		</span><br><span class="line">		System.out.println(<span class="string">"=================================================="</span>);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// ② while문</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">1</span>, j = <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">while</span> (i &lt;= <span class="number">9</span>) &#123;</span><br><span class="line">			j= <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">while</span> (j &lt;= <span class="number">9</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span> (i * j &lt; <span class="number">10</span>) &#123;</span><br><span class="line">					System.out.print(j + <span class="string">"X"</span> + i + <span class="string">"=0"</span> + (i * j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					System.out.print(j + <span class="string">"X"</span> + i + <span class="string">"="</span> + (i * j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125;</span><br><span class="line">				j++;</span><br><span class="line">			&#125; <span class="comment">// while</span></span><br><span class="line">			System.out.println();</span><br><span class="line">			i++;</span><br><span class="line">		&#125; <span class="comment">// while</span></span><br><span class="line">		</span><br><span class="line">		System.out.println(<span class="string">"=================================================="</span>);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// ③ do~while문</span></span><br><span class="line"></span><br><span class="line">		i = <span class="number">1</span>; <span class="comment">// → ②번에서 변수를 정의해줬기 때문</span></span><br><span class="line">		<span class="keyword">do</span> &#123;</span><br><span class="line">			j = <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">do</span> &#123;</span><br><span class="line">				<span class="keyword">if</span> (i * j &lt; <span class="number">10</span>) &#123;</span><br><span class="line">					System.out.print(j + <span class="string">"X"</span> + i + <span class="string">"=0"</span> + (i * j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					System.out.print(j + <span class="string">"X"</span> + i + <span class="string">"="</span> + (i * j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125;</span><br><span class="line">				j++;</span><br><span class="line">			&#125; <span class="keyword">while</span> (j &lt;= <span class="number">9</span>);</span><br><span class="line">			System.out.println();</span><br><span class="line">			i++;</span><br><span class="line">		&#125; <span class="keyword">while</span> (i &lt;= <span class="number">9</span>);</span><br><span class="line"></span><br><span class="line">	&#125;<span class="comment">// main()</span></span><br><span class="line">&#125;<span class="comment">// class</span></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/11/java05/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -948,6 +966,195 @@
 <h3 id="예제1-2"><a href="#예제1-2" class="headerlink" title="예제1"></a><code>예제1</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Continue</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;	</span><br><span class="line">		<span class="comment">//1부터 10까지의 수 중에서 홀수의 누적합(oddSum)을 구하시오 </span></span><br><span class="line">		<span class="comment">//: for, if</span></span><br><span class="line">		<span class="keyword">int</span> oddSum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= <span class="number">10</span> ; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">1</span>) &#123;</span><br><span class="line">				oddSum += i;</span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">		System.out.println(<span class="string">"홀수의 누적합 : "</span> + oddSum);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//1부터 10까지의 수 중에서 홀수의 누적합(oddSum)을 구하시오 </span></span><br><span class="line">		<span class="comment">//: for, if, continue</span></span><br><span class="line">		oddSum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= <span class="number">10</span> ; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">0</span>) &#123;	<span class="comment">//짝수이면</span></span><br><span class="line">				<span class="keyword">continue</span>;	<span class="comment">//반복문의 처음으로 되돌림</span></span><br><span class="line">			&#125;<span class="keyword">else</span> &#123;			<span class="comment">//홀수이면</span></span><br><span class="line">				oddSum += i;	<span class="comment">//홀수의 누적합 계산</span></span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">		System.out.println(<span class="string">"홀수의 누적합 : "</span> + oddSum);</span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
 <h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><h3 id="break-1"><a href="#break-1" class="headerlink" title="break"></a><code>break</code></h3><p> : 반복문을 탈출하는 명령어</p>
 <h3 id="예제1-3"><a href="#예제1-3" class="headerlink" title="예제1"></a><code>예제1</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Break</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span> ; <span class="keyword">true</span> ; i++) &#123; 	<span class="comment">//무한루프</span></span><br><span class="line">			<span class="keyword">if</span>(i == <span class="number">10</span>) &#123;</span><br><span class="line">				System.out.println(<span class="string">"i의 값이 10이므로 반복문을 종료합니다!"</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">			System.out.println(<span class="string">"i의 값 : "</span> + i);</span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/11/java05b/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IngJin">
+      <meta itemprop="description" content="잉진은 오늘도 코딩을 합니다.">
+      <meta itemprop="image" content="/images/fava.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="잉로그">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/11/java05b/" class="post-title-link" itemprop="url">JAVA기초 05-2. 반복문 응용</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-04-11 18:56:37" itemprop="dateCreated datePublished" datetime="2019-04-11T18:56:37+09:00">2019-04-11</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-04-14 23:30:11" itemprop="dateModified" datetime="2019-04-14T23:30:11+09:00">2019-04-14</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/04/11/java05b/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/11/java05b/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="별찍기-1"><a href="#별찍기-1" class="headerlink" title="별찍기 1"></a>별찍기 1</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Ex_for_for</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123; 	<span class="comment">//for i : 1부터 5까지 반복 	</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; j++) &#123; 	<span class="comment">//for j : 1부터 i까지 반복</span></span><br><span class="line">				System.out.print(<span class="string">"("</span> + i + <span class="string">","</span> + j + <span class="string">")"</span>);	</span><br><span class="line">			&#125;<span class="comment">//for j</span></span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;<span class="comment">//for i</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		 ★</span></span><br><span class="line"><span class="comment">		 ★★ </span></span><br><span class="line"><span class="comment">		 ★ ★ ★</span></span><br><span class="line"><span class="comment">		 ★ ★ ★ ★ </span></span><br><span class="line"><span class="comment">		 ★ ★ ★ ★ ★ </span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		 </span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; j++) &#123; </span><br><span class="line">				System.out.print(<span class="string">"★ "</span>);</span><br><span class="line">			&#125;<span class="comment">//for j</span></span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;<span class="comment">//for i</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="별찍기-2"><a href="#별찍기-2" class="headerlink" title="별찍기 2"></a>별찍기 2</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test_for_for</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		 ★ ★ ★ ★ ★  </span></span><br><span class="line"><span class="comment">		 ★ ★ ★ ★</span></span><br><span class="line"><span class="comment">		 ★ ★ ★ </span></span><br><span class="line"><span class="comment">		 ★ ★ </span></span><br><span class="line"><span class="comment">		 ★ </span></span><br><span class="line"><span class="comment">		 */</span> </span><br><span class="line">		 </span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123; <span class="comment">//for (int i = 5; i &gt;= 1; i--)</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">5</span>; j &gt;= i; j--) &#123; <span class="comment">//for (int j = 1; j &lt;= i; j++)</span></span><br><span class="line">				<span class="comment">// System.out.print("(" + i + ","+ j + ")");</span></span><br><span class="line">				<span class="comment">/*</span></span><br><span class="line"><span class="comment">				(1,5)(1,4)(1,3)(1,2)(1,1) 	|(5,1)(5,2)(5,3)(5,4)(5,5)</span></span><br><span class="line"><span class="comment">				(2,5)(2,4)(2,3)(2,2)		|(4,1)(4,2)(4,3)(4,4)</span></span><br><span class="line"><span class="comment">				(3,5)(3,4)(3,3)			|(3,1)(3,2)(3,3)</span></span><br><span class="line"><span class="comment">				(4,5)(4,4)			|(2,1)(2,2)</span></span><br><span class="line"><span class="comment">				(5,5) 				|(1,1)</span></span><br><span class="line"><span class="comment">				 */</span></span><br><span class="line">				System.out.print(<span class="string">"★ "</span>);</span><br><span class="line">			&#125;<span class="comment">//for j</span></span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;<span class="comment">//for i</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="구구단-1"><a href="#구구단-1" class="headerlink" title="구구단 1"></a>구구단 1</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Ex_gugudan</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= <span class="number">9</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= <span class="number">9</span>; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(i*j &lt; <span class="number">10</span>) &#123;</span><br><span class="line">					System.out.print(i + <span class="string">"X"</span> + j + <span class="string">"=0"</span> + (i*j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125;<span class="keyword">else</span> &#123;<span class="comment">//for j</span></span><br><span class="line">				System.out.print(i + <span class="string">"X"</span> + j + <span class="string">"="</span> + (i*j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125;<span class="comment">//if</span></span><br><span class="line">			&#125;<span class="comment">//for j</span></span><br><span class="line">			System.out.println();	<span class="comment">//j끝나면 줄바꿈</span></span><br><span class="line">		&#125;<span class="comment">//for i</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		2X1=02	2X2=04	2X3=06	2X4=08	2X5=10	2X6=12	2X7=14	2X8=16	2X9=18	</span></span><br><span class="line"><span class="comment">		3X1=03	3X2=06	3X3=09	3X4=12	3X5=15	3X6=18	3X7=21	3X8=24	3X9=27	</span></span><br><span class="line"><span class="comment">		4X1=04	4X2=08	4X3=12	4X4=16	4X5=20	4X6=24	4X7=28	4X8=32	4X9=36	</span></span><br><span class="line"><span class="comment">		5X1=05	5X2=10	5X3=15	5X4=20	5X5=25	5X6=30	5X7=35	5X8=40	5X9=45	</span></span><br><span class="line"><span class="comment">		6X1=06	6X2=12	6X3=18	6X4=24	6X5=30	6X6=36	6X7=42	6X8=48	6X9=54	</span></span><br><span class="line"><span class="comment">		7X1=07	7X2=14	7X3=21	7X4=28	7X5=35	7X6=42	7X7=49	7X8=56	7X9=63	</span></span><br><span class="line"><span class="comment">		8X1=08	8X2=16	8X3=24	8X4=32	8X5=40	8X6=48	8X7=56	8X8=64	8X9=72	</span></span><br><span class="line"><span class="comment">		9X1=09	9X2=18	9X3=27	9X4=36	9X5=45	9X6=54	9X7=63	9X8=72	9X9=81	</span></span><br><span class="line"><span class="comment">		*/</span></span><br><span class="line">		</span><br><span class="line">		System.out.println(<span class="string">"======================================================="</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">9</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">2</span>; j &lt;= <span class="number">9</span>; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(i*j &lt; <span class="number">10</span>) &#123;</span><br><span class="line">					System.out.print(j + <span class="string">"X"</span> + i + <span class="string">"=0"</span> + (i*j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">					System.out.print(j + <span class="string">"X"</span> + i + <span class="string">"="</span> + (i*j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125;<span class="comment">//if</span></span><br><span class="line">			&#125;<span class="comment">//for j</span></span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;<span class="comment">// for i</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		2X1=02	3X1=03	4X1=04	5X1=05	6X1=06	7X1=07	8X1=08	9X1=09	</span></span><br><span class="line"><span class="comment">		2X2=04	3X2=06	4X2=08	5X2=10	6X2=12	7X2=14	8X2=16	9X2=18	</span></span><br><span class="line"><span class="comment">		2X3=06	3X3=09	4X3=12	5X3=15	6X3=18	7X3=21	8X3=24	9X3=27	</span></span><br><span class="line"><span class="comment">		2X4=08	3X4=12	4X4=16	5X4=20	6X4=24	7X4=28	8X4=32	9X4=36	</span></span><br><span class="line"><span class="comment">		2X5=10	3X5=15	4X5=20	5X5=25	6X5=30	7X5=35	8X5=40	9X5=45	</span></span><br><span class="line"><span class="comment">		2X6=12	3X6=18	4X6=24	5X6=30	6X6=36	7X6=42	8X6=48	9X6=54	</span></span><br><span class="line"><span class="comment">		2X7=14	3X7=21	4X7=28	5X7=35	6X7=42	7X7=49	8X7=56	9X7=63	</span></span><br><span class="line"><span class="comment">		2X8=16	3X8=24	4X8=32	5X8=40	6X8=48	7X8=56	8X8=64	9X8=72	</span></span><br><span class="line"><span class="comment">		2X9=18	3X9=27	4X9=36	5X9=45	6X9=54	7X9=63	8X9=72	9X9=81	</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="구구단-2"><a href="#구구단-2" class="headerlink" title="구구단 2"></a>구구단 2</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test_gugudan</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		 * 2X1=02 3X1=03 4X1=04 5X1=05 6X1=06 7X1=07 8X1=08 9X1=09 2X2=04 3X2=06 4X2=08</span></span><br><span class="line"><span class="comment">		 * 5X2=10 6X2=12 7X2=14 8X2=16 9X2=18 2X3=06 3X3=09 4X3=12 5X3=15 6X3=18 7X3=21</span></span><br><span class="line"><span class="comment">		 * 8X3=24 9X3=27 2X4=08 3X4=12 4X4=16 5X4=20 6X4=24 7X4=28 8X4=32 9X4=36 2X5=10</span></span><br><span class="line"><span class="comment">		 * 3X5=15 4X5=20 5X5=25 6X5=30 7X5=35 8X5=40 9X5=45 2X6=12 3X6=18 4X6=24 5X6=30</span></span><br><span class="line"><span class="comment">		 * 6X6=36 7X6=42 8X6=48 9X6=54 2X7=14 3X7=21 4X7=28 5X7=35 6X7=42 7X7=49 8X7=56</span></span><br><span class="line"><span class="comment">		 * 9X7=63 2X8=16 3X8=24 4X8=32 5X8=40 6X8=48 7X8=56 8X8=64 9X8=72 2X9=18 3X9=27</span></span><br><span class="line"><span class="comment">		 * 4X9=36 5X9=45 6X9=54 7X9=63 8X9=72 9X9=81</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">// ① for문</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">9</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">2</span>; j &lt;= <span class="number">9</span>; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (i * j &lt; <span class="number">10</span>) &#123;</span><br><span class="line">					System.out.print(j + <span class="string">"X"</span> + i + <span class="string">"=0"</span> + (i * j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					System.out.print(j + <span class="string">"X"</span> + i + <span class="string">"="</span> + (i * j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125; <span class="comment">// if</span></span><br><span class="line">			&#125; <span class="comment">// for j</span></span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125; <span class="comment">// for i</span></span><br><span class="line">		</span><br><span class="line">		System.out.println(<span class="string">"=================================================="</span>);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// ② while문</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">1</span>, j = <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">while</span> (i &lt;= <span class="number">9</span>) &#123;</span><br><span class="line">			j= <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">while</span> (j &lt;= <span class="number">9</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span> (i * j &lt; <span class="number">10</span>) &#123;</span><br><span class="line">					System.out.print(j + <span class="string">"X"</span> + i + <span class="string">"=0"</span> + (i * j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					System.out.print(j + <span class="string">"X"</span> + i + <span class="string">"="</span> + (i * j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125;</span><br><span class="line">				j++;</span><br><span class="line">			&#125; <span class="comment">// while</span></span><br><span class="line">			System.out.println();</span><br><span class="line">			i++;</span><br><span class="line">		&#125; <span class="comment">// while</span></span><br><span class="line">		</span><br><span class="line">		System.out.println(<span class="string">"=================================================="</span>);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// ③ do~while문</span></span><br><span class="line"></span><br><span class="line">		i = <span class="number">1</span>; <span class="comment">// → ②번에서 변수를 정의해줬기 때문</span></span><br><span class="line">		<span class="keyword">do</span> &#123;</span><br><span class="line">			j = <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">do</span> &#123;</span><br><span class="line">				<span class="keyword">if</span> (i * j &lt; <span class="number">10</span>) &#123;</span><br><span class="line">					System.out.print(j + <span class="string">"X"</span> + i + <span class="string">"=0"</span> + (i * j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					System.out.print(j + <span class="string">"X"</span> + i + <span class="string">"="</span> + (i * j) + <span class="string">"\t"</span>);</span><br><span class="line">				&#125;</span><br><span class="line">				j++;</span><br><span class="line">			&#125; <span class="keyword">while</span> (j &lt;= <span class="number">9</span>);</span><br><span class="line">			System.out.println();</span><br><span class="line">			i++;</span><br><span class="line">		&#125; <span class="keyword">while</span> (i &lt;= <span class="number">9</span>);</span><br><span class="line"></span><br><span class="line">	&#125;<span class="comment">// main()</span></span><br><span class="line">&#125;<span class="comment">// class</span></span><br></pre></td></tr></table></figure>
 
           
         
@@ -2484,274 +2691,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/03/29/190329/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IngJin">
-      <meta itemprop="description" content="잉진은 오늘도 코딩을 합니다.">
-      <meta itemprop="image" content="/images/fava.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="잉로그">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/29/190329/" class="post-title-link" itemprop="url">19년 3월 5주차 Today I Learned</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">작성일</span>
-              
-
-              
-                
-              
-
-              <time title="Post created: 2019-03-29 18:56:37" itemprop="dateCreated datePublished" datetime="2019-03-29T18:56:37+09:00">2019-03-29</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Updated at: 2019-03-31 22:08:19" itemprop="dateModified" datetime="2019-03-31T22:08:19+09:00">2019-03-31</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/TIL/" itemprop="url" rel="index"><span itemprop="name">TIL</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">댓글: </span>
-                <a href="/2019/03/29/190329/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/29/190329/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="190325-TIL"><a href="#190325-TIL" class="headerlink" title="190325 TIL"></a>190325 TIL</h2><ul>
-<li><p>국비과정 사전예습 시작 </p>
-<blockquote>
-<p>19.03.25~19.03.29</p>
-<blockquote>
-<p>09:20 ~ 12:10 (월~금)  </p>
-</blockquote>
-</blockquote>
-</li>
-<li><p>블로그에 <code>Disqus</code>를 연동<br>이제 나도 댓글을 남길 수 있다.  </p>
-<p><img src="https://user-images.githubusercontent.com/23150245/54912799-c3009600-4f34-11e9-8ea6-9e48ceabbb72.PNG" alt="disq">  </p>
-</li>
-<li><p><strong><code>Disqus</code> 연동 요약</strong><br><code>Disqus</code>에 <a href="https://disqus.com/" target="_blank" rel="noopener">가입</a>하여 <code>shortname</code>을 설정 한 뒤<br><em>themes/note</em> 경로의 <code>_config.yml</code> 에서<br><code>#Disqus</code>부분을 다음과 같이 수정한다.</p>
-<pre><code class="yml"><span class="comment">#Disqus</span>
-<span class="attr">disqus:</span> 
-<span class="attr">enable:</span> <span class="literal">true</span> 
-<span class="attr">shortname:</span> <span class="string">ingjin</span> <span class="comment">#shortname 삽입</span>
-<span class="attr">count:</span> <span class="literal">true</span>
-<span class="attr">lazyload:</span> <span class="literal">false</span>
-</code></pre>
-</li>
-<li><p>그렇다, 오늘은 별거 안했다.  </p>
-</li>
-</ul>
-<h2 id="190326-TIL"><a href="#190326-TIL" class="headerlink" title="190326 TIL"></a>190326 TIL</h2><ul>
-<li>Java 개발 환경 구축  <ol>
-<li><code>JDK</code> 설치  </li>
-<li><code>JAVA_HOME</code> 환경 변수 생성</li>
-<li><code>PATH</code> 환경 변수 추가<br><strong><code>;%JAVA_HOME%\bin;</code></strong></li>
-<li><code>CLASSPATH</code> 환경 변수 생성<br><strong><code>.;%JAVA_HOME%\lib;</code></strong> </li>
-</ol>
-</li>
-</ul>
-<ul>
-<li><code>CLASSPATH?</code><ul>
-<li>컴퓨터 어딘가에 존재하는<br>클래스 파일을 사용하기 위한 방법. </li>
-<li>미지정시 현재 디렉토리에서만<br>필요한 클래스를 가져다 쓴다.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>코드블럭 라인넘버가 나온다.<br>어제는 왜 안나온거지..?<pre><code class="java"><span class="function">function <span class="title">add</span><span class="params">(x, y)</span> </span>{
-<span class="keyword">return</span> x + y
-}
-</code></pre>
-</li>
-</ul>
-<h2 id="190327-TIL"><a href="#190327-TIL" class="headerlink" title="190327 TIL"></a>190327 TIL</h2><ul>
-<li><strong><code>예비군 기본훈련</code></strong> 다녀왔습니다. </li>
-<li><p><code>Markdown</code> 이미지 크기 조절<br><code>&lt;img&gt;태그</code>가 더 편한것 같은 이 느낌</p>
-<pre><code class="css">&lt;img src="이미지 url" width="원하는 크기"&gt;
-</code></pre>
-<ol>
-<li><code>width=&quot;800&quot;</code><br><img src="https://user-images.githubusercontent.com/23150245/55076571-2297a680-50d9-11e9-8e23-53f5da293b7e.jpg" width="800"></li>
-<li><code>width=&quot;400&quot;</code><br><img src="https://user-images.githubusercontent.com/23150245/55076571-2297a680-50d9-11e9-8e23-53f5da293b7e.jpg" width="400"></li>
-</ol>
-<p><em>사실 마크다운으로 수정하면</em><br><em>자꾸 엑박이 뜬다..</em><br><em>이유가 뭘까..?</em></p>
-</li>
-</ul>
-<h2 id="190328-TIL"><a href="#190328-TIL" class="headerlink" title="190328 TIL"></a>190328 TIL</h2><ul>
-<li><p><code>java</code>파일을 <code>컴파일</code>하면<br><code>class</code>파일이 생성된다.  </p>
-<blockquote>
-<p><code>컴파일</code><br>코드를 컴퓨터가 읽을 수 있도록 변환하는 과정.  </p>
-</blockquote>
-<blockquote>
-<p><code>패키지</code><br>서로 관련이 있는 클래스 또는 인터페이스들을<br>하나로 묶어 놓은 묶음.</p>
-</blockquote>
-<ul>
-<li><code>syso</code> 입력 후 <code>ctrl</code>+<code>space</code><br>= <code>System.out.println()</code> 생성  </li>
-</ul>
-</li>
-</ul>
-<h2 id="190329-TIL"><a href="#190329-TIL" class="headerlink" title="190329 TIL"></a>190329 TIL</h2><ul>
-<li><p><code>이클립스(Eclipse)</code>에서<br>프로젝트를 불러오는 방법<br>= <code>Import</code>하는 방법</p>
-</li>
-<li><p><code>헝가리안 표기법</code>  </p>
-<blockquote>
-<p>변수 및 함수의 인자 이름 앞에<br>데이터 타입을 명시하는 코딩 규칙</p>
-</blockquote>
-<p><em>요즘 안쓴다고 한다.</em></p>
-</li>
-<li>사전학습이 끝났다.<br>생각해보니 뭐 안했다.</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2800,7 +2739,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
