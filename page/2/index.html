@@ -368,6 +368,209 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/05/java02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IngJin">
+      <meta itemprop="description" content="잉진은 오늘도 코딩을 합니다.">
+      <meta itemprop="image" content="/images/fava.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="잉로그">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/05/java02/" class="post-title-link" itemprop="url">JAVA기초 02.형변환(Casting)</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-04-05 18:56:37" itemprop="dateCreated datePublished" datetime="2019-04-05T18:56:37+09:00">2019-04-05</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-04-09 22:32:00" itemprop="dateModified" datetime="2019-04-09T22:32:00+09:00">2019-04-09</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/04/05/java02/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/05/java02/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="형변환-Casting-규칙"><a href="#형변환-Casting-규칙" class="headerlink" title="형변환(Casting) 규칙"></a>형변환(Casting) 규칙</h2><p>  ========= <code>UpCasting</code> (자동형 변환, 묵시적 형변환) =========&gt;<br>  byte(1) → short/char(2) → int(4) → long(8) → float(4) → double(8)<br>  &lt;======== <code>DownCasting</code> (강제형 변환, 명시적 형변환) ========</p>
+<ul>
+<li><p><code>자동형 변환</code><br>: 작은타입이 큰타입으로 자동으로 변환<br>→ <code>묵시적 형변환</code>, <code>UpCasting</code></p>
+</li>
+<li><p><code>강제형 변환</code><br>: 큰타입을 작은타입으로 강제적으로 변환<br>→ <code>명시적 형변환</code>, <code>DownCasting</code>, <code>일반적인 의미의 Casting</code></p>
+</li>
+</ul>
+<h2 id="래퍼-클래스-Wrapper-class"><a href="#래퍼-클래스-Wrapper-class" class="headerlink" title="래퍼 클래스(Wrapper class)"></a>래퍼 클래스(Wrapper class)</h2><ul>
+<li><code>래퍼 클래스(Wrapper class)</code><br>: 기본 타입에 해당하는 데이터를 객체로 이름 그대로 <code>포장</code>해 주는 클래스<br>각각의 타입에 해당하는 데이터를 인수로 전달받아, 해당 값을 가지는 객체로 만들어 준다.</li>
+</ul>
+<h2 id="예제-1"><a href="#예제-1" class="headerlink" title="예제 1"></a>예제 1</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Casting01</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">10</span>;	<span class="comment">//정수형 변수 a를 선언하고 값(10)을 할당 ▶ 초기화</span></span><br><span class="line">		<span class="keyword">double</span> b;	<span class="comment">//실수형 변수 b를 선언만 한 상태</span></span><br><span class="line">		b = a;		<span class="comment">//변수a의 값을 b에 할당</span></span><br><span class="line">		<span class="comment">//자동형 변환:작은타입(int)이 큰타입(double)으로 자동으로 변환 </span></span><br><span class="line">		<span class="comment">//→묵시적 형변환, UpCasting</span></span><br><span class="line">		System.out.println(<span class="string">"변수 a:"</span> + a);</span><br><span class="line">		System.out.println(<span class="string">"변수 b:"</span> + b); <span class="comment">// 출력내에서 +는 더하기가 아니라 결합을 의미</span></span><br><span class="line">	</span><br><span class="line">		<span class="keyword">int</span> c;		<span class="comment">//정수형 변수 c를 선언만 한 상태</span></span><br><span class="line">		<span class="keyword">double</span> d = <span class="number">34.5</span>;<span class="comment">//실수형 변수 d를 선언하고 값(34.5)을 할당 ▶ 초기화</span></span><br><span class="line">		<span class="comment">//c = d;	//오류:큰타입(double)을 작은타입(int)에 할당</span></span><br><span class="line">		c = (<span class="keyword">int</span>) d;	<span class="comment">//강제형 변환(double → int) </span></span><br><span class="line">		<span class="comment">//→명시적 형변환, DownCasting, 일반적인 의미의 Casting	</span></span><br><span class="line">		System.out.println(<span class="string">"변수 c:"</span> + c);	<span class="comment">//출력값 : 34 → 0.5의 손실 발생</span></span><br><span class="line">		System.out.println(<span class="string">"변수 d:"</span> + d);	<span class="comment">//출력값 : 34.5</span></span><br><span class="line">	</span><br><span class="line">		<span class="keyword">int</span> x = <span class="number">129</span>;</span><br><span class="line">		<span class="keyword">byte</span> y = (<span class="keyword">byte</span>) x;			<span class="comment">//강제형 변환(int → byte)</span></span><br><span class="line">		System.out.println(<span class="string">"변수 x:"</span> + x);	<span class="comment">//출력값 : 128</span></span><br><span class="line">		System.out.println(<span class="string">"변수 y:"</span> + y);	<span class="comment">//출력값 : -128</span></span><br><span class="line">		<span class="comment">//byte(-128~127) 1이 남아서 -128부터 시작, </span></span><br><span class="line">		<span class="comment">//만약 x = 129였다면 -127이 된다.</span></span><br><span class="line">	</span><br><span class="line">		<span class="keyword">char</span> i = <span class="string">'A'</span>;</span><br><span class="line">		<span class="keyword">int</span> j = i;				<span class="comment">//자동형 변환(char → int)</span></span><br><span class="line">		System.out.println(<span class="string">"변수 i:"</span> + i);	<span class="comment">//출력값 : A</span></span><br><span class="line">		System.out.println(<span class="string">"변수 j:"</span> + j);	<span class="comment">//출력값 : 65 → ASCII(UniCode) 코드값</span></span><br><span class="line">		System.out.println(<span class="string">"변수 j:"</span> + (<span class="keyword">char</span>)j); 	</span><br><span class="line">		<span class="comment">//출력값 : A ▶ 강제형 변환 (int → char) </span></span><br><span class="line">		<span class="comment">//주로 이러한 용도로 사용된다.</span></span><br><span class="line">	&#125; <span class="comment">//main</span></span><br><span class="line">&#125; <span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="예제-2"><a href="#예제-2" class="headerlink" title="예제 2"></a>예제 2</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Casting02</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">char</span> upper = <span class="string">'A'</span>;</span><br><span class="line">		<span class="keyword">char</span> lower = <span class="string">'a'</span>;</span><br><span class="line">		System.out.println(upper);		<span class="comment">//출력값 : A(65)</span></span><br><span class="line">		System.out.println(lower);		<span class="comment">//출력값 : a(97)</span></span><br><span class="line">		System.out.println(upper + lower);	<span class="comment">//출력값 : 162..?</span></span><br><span class="line">	</span><br><span class="line">		<span class="comment">//대문자(upper)를 소문자로 바꾸어서 출력하시오.</span></span><br><span class="line">		<span class="comment">//System.out.println(upper + 32); ▶ 출력값 : 97</span></span><br><span class="line">		<span class="comment">//System.out.println((char)upper + 32);	(X)</span></span><br><span class="line">		<span class="comment">//출력값 : 97 → char + int → int 로 계산됨</span></span><br><span class="line">		System.out.println((<span class="keyword">char</span>)(upper + <span class="number">32</span>));	</span><br><span class="line">		<span class="comment">//출력값 : a → upper + 32를 먼저 연산해준다.</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>아래의 명령은 몇 번의 <code>형변환</code>이 발생하는가?</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> sum = <span class="number">3.5F</span> + <span class="number">12</span>;</span><br></pre></td></tr></table></figure>
+<p>  ① 3.5F + 12.0F    // <code>int</code> → <code>float</code><br>  ② double sum = 15.5F; // <code>float</code> → <code>double</code></p>
+</li>
+</ul>
+<h2 id="예제-3"><a href="#예제-3" class="headerlink" title="예제 3"></a>예제 3</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Casting03</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//String 클래스를 이용해 문자 10(su1)과 문자 20(su2)을 더하기 연산</span></span><br><span class="line">		String su1 = <span class="string">"10"</span>;</span><br><span class="line">		String su2 = <span class="string">"20"</span>;</span><br><span class="line">		System.out.println(su1 + su2);	<span class="comment">//출력값 : 1020  </span></span><br><span class="line">						<span class="comment">//문자는 Concatenation (연결,결합)</span></span><br><span class="line">	</span><br><span class="line">		<span class="keyword">int</span> a = Integer.parseInt(su1);	<span class="comment">//변수 a에는 정수 10이 기억 ▶ Wrapper Class</span></span><br><span class="line">		<span class="keyword">int</span> b = Integer.parseInt(su2);	<span class="comment">//변수 b에는 정수 20이 기억 ▶ Wrapper Class</span></span><br><span class="line">		System.out.println(a + b);	<span class="comment">//출력값 : 30 ▶ 숫자는 연산된다.</span></span><br><span class="line">		System.out.println(Integer.parseInt(su1) + Integer.parseInt(su2));  </span><br><span class="line">		<span class="comment">//한번에 처리하는 식</span></span><br><span class="line">	</span><br><span class="line">		String su3 = <span class="string">"10.5"</span>; 		<span class="comment">//double type로 변환 해줘야함</span></span><br><span class="line">		String su4 = <span class="string">"20.3"</span>;		<span class="comment">//▶ Wrapper Class</span></span><br><span class="line">		System.out.println(su3+su4);	<span class="comment">//출력값 : 10.520.3</span></span><br><span class="line">	</span><br><span class="line">		<span class="keyword">double</span> c = Double.parseDouble(su3);</span><br><span class="line">		<span class="keyword">double</span> d = Double.parseDouble(su4);</span><br><span class="line">		System.out.println(c+d);	<span class="comment">//출력값 : 30.8</span></span><br><span class="line">		System.out.println(Double.parseDouble(su3)+Double.parseDouble(su4)); </span><br><span class="line">		<span class="comment">//한번에 처리하는 식</span></span><br><span class="line">	&#125; <span class="comment">//main()</span></span><br><span class="line">&#125; <span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/03/java01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1596,7 +1799,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
