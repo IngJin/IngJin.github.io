@@ -368,6 +368,267 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/07/java03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IngJin">
+      <meta itemprop="description" content="잉진은 오늘도 코딩을 합니다.">
+      <meta itemprop="image" content="/images/fava.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="잉로그">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/07/java03/" class="post-title-link" itemprop="url">JAVA기초 03.연산자(Operator)</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-04-07 18:56:37" itemprop="dateCreated datePublished" datetime="2019-04-07T18:56:37+09:00">2019-04-07</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-04-10 00:13:26" itemprop="dateModified" datetime="2019-04-10T00:13:26+09:00">2019-04-10</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/04/07/java03/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/07/java03/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="연산"><a href="#연산" class="headerlink" title="연산"></a>연산</h2><ul>
+<li><p><code>연산</code> : <strong>주어진 식을 계산하여 결과를 얻어내는 과정</strong></p>
+</li>
+<li><p>명령어의 형식<br>[<code>피연산자</code> <code>연산자</code> <code>피연산자</code>]<br>ex) <code>a + 5</code>, <code>b + 4</code>, …</p>
+<ul>
+<li>명령부 :<code>연산자</code>, <code>OpCode</code>        </li>
+<li>주소부 :<code>연산에 필요한 값</code>[<code>피연산자</code>], <code>Operand</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="1-산술연산자"><a href="#1-산술연산자" class="headerlink" title="1. 산술연산자"></a>1. 산술연산자</h2><ul>
+<li><code>산술연산자</code> : <code>+</code>(덧셈),<code>-</code>(뺄셈),<code>*</code>(곱셈),<code>/</code>(나눗셈)<br><code>%</code>(나머지연산) : 짝수/홀수, 배수의 판단에 사용 ▶ 주로 <code>조건식</code>에서 사용</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator01</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">10</span>, b=<span class="number">3</span>;		</span><br><span class="line">		<span class="keyword">int</span> addResult = a + b;	<span class="comment">//덧셈</span></span><br><span class="line">		<span class="keyword">int</span> subResult = a - b;	<span class="comment">//뺄셈</span></span><br><span class="line">		<span class="keyword">int</span> mulResult = a * b;	<span class="comment">//곱셉</span></span><br><span class="line">		<span class="keyword">int</span> divResult = a / b;	<span class="comment">//나눗셈</span></span><br><span class="line">		<span class="keyword">int</span> modResult = a % b;	<span class="comment">//나머지</span></span><br><span class="line">		</span><br><span class="line">		System.out.println(addResult);	<span class="comment">//출력값 : 13</span></span><br><span class="line">		System.out.println(subResult);	<span class="comment">//출력값 : 7</span></span><br><span class="line">		System.out.println(mulResult);	<span class="comment">//출력값 : 30</span></span><br><span class="line">		System.out.println(divResult);	<span class="comment">//출력값 : 3 (int로 선언했기 때문)</span></span><br><span class="line">		System.out.println(modResult);	<span class="comment">//출력값 : 1</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> x = <span class="number">3</span>, y = <span class="number">5</span>;</span><br><span class="line">		System.out.println(<span class="string">"x + y = "</span> + x + y);		</span><br><span class="line">		<span class="comment">//출력값 : x + y = 35(결합)</span></span><br><span class="line">		System.out.println(<span class="string">"x + y = "</span> + (x + y)); 	</span><br><span class="line">		<span class="comment">//출력값 : x + y = 8(연산)</span></span><br><span class="line">		System.out.println(x + y + <span class="string">" = x + y"</span>);</span><br><span class="line">		<span class="comment">//출력값 : 8 = x + y</span></span><br><span class="line">		<span class="comment">//System.out.println("x - y = " + x - y); </span></span><br><span class="line">		<span class="comment">//오류 : + x 결합 후 - y 나오기 때문</span></span><br><span class="line">		System.out.println(<span class="string">"x - y = "</span> + (x - y));</span><br><span class="line">		<span class="comment">//출력값 : x - y = -2</span></span><br><span class="line">		System.out.println(x - y + <span class="string">" = x - y"</span>);</span><br><span class="line">		<span class="comment">//출력값 : -2 = x - y</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-증감연산자"><a href="#2-증감연산자" class="headerlink" title="2. 증감연산자"></a>2. 증감연산자</h2><ul>
+<li><code>증감연산자</code> : <code>++</code>(증가), <code>--</code>(감소)<br>  ▶ <code>반복문</code>에서 많이 사용<br>  별도의 연산결과를 처리하지 않은 연산자 : <code>단항연산</code><br>  <strong>연산자의 위치가 변수의 앞인지 뒤인지에 따라 결과가 다르다.</strong></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator02</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> b = <span class="number">10</span>;</span><br><span class="line">		System.out.println(++a);	<span class="comment">//출력값 : 1 ▶ 전위표기법(prefix)</span></span><br><span class="line">		System.out.println(--b);	<span class="comment">//출력값 : 9</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> d = <span class="number">10</span>;</span><br><span class="line">		System.out.println(c++); 	<span class="comment">//출력값 : 0 메모리 상에서는 1</span></span><br><span class="line">		System.out.println(c); 		<span class="comment">//출력값 : 1</span></span><br><span class="line">		System.out.println(d--); 	<span class="comment">//출력값 : 10 메모리 상에서는 9</span></span><br><span class="line">		System.out.println(d);		<span class="comment">//출력값 : 9</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//x = 5, y = 10 일 경우 'x++ + ++x + y++'의 결과와 </span></span><br><span class="line">		<span class="comment">//연산이 수행된후 'x+y'의 결과는?</span></span><br><span class="line">		<span class="keyword">int</span> x = <span class="number">5</span>;</span><br><span class="line">		<span class="keyword">int</span> y = <span class="number">10</span>;</span><br><span class="line">		<span class="keyword">int</span> z = x++ + ++x + y++;</span><br><span class="line">		System.out.println(z);		<span class="comment">//출력값 : 22 (5 + 7 + 10)</span></span><br><span class="line">		System.out.println(x+y);	<span class="comment">//출력값 : 18 (7 + 11)</span></span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		  연산	출력 		메모리 </span></span><br><span class="line"><span class="comment">		 x++	5		6(x)</span></span><br><span class="line"><span class="comment">		 ++x	7		7(X)</span></span><br><span class="line"><span class="comment">		 y++	10		11(y)</span></span><br><span class="line"><span class="comment">		 현장에서 이런거 쓸 일 없음~</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-비트연산자"><a href="#3-비트연산자" class="headerlink" title="3.비트연산자"></a>3.비트연산자</h2><ul>
+<li><code>비트연산자</code><br>  : 개발자의 입장에서 비트를 직접 조작할 수 있다는 장점 → <code>하드웨어 제어</code><br>  <em>현재는 자바에서 거의 사용하지 않는다.</em><br>  1.<code>&amp;(AND)</code>: <code>모두 1일때</code> → 1출력<br>  2.<code>|(OR)</code> : <code>하나라도 1일때</code> → 1출력<br>  3.<code>^(XOR)</code>: <code>서로 다를때</code> → 1출력</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator03</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> x = <span class="number">3</span>; <span class="comment">//2진법 : 0011</span></span><br><span class="line">		<span class="keyword">int</span> y = <span class="number">2</span>; <span class="comment">//2진법 : 0010</span></span><br><span class="line">		</span><br><span class="line">		System.out.println(x &amp; y);	<span class="comment">//출력값 : 2 (0010)</span></span><br><span class="line">		System.out.println(x | y);	<span class="comment">//출력값 : 3 (0011)</span></span><br><span class="line">		System.out.println(x ^ y);	<span class="comment">//출력값 : 1 (0001)</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="4-비교연산자"><a href="#4-비교연산자" class="headerlink" title="4.비교연산자"></a>4.비교연산자</h2><ul>
+<li><code>비교연산자</code><br>  : 연산의 결과는 <code>true</code>, <code>false</code> 반환<br>  ▶ <code>조건식</code>에 많이 사용<ol>
+<li><code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code> : 수학의 연산과 같은 관계연산자(<code>비교연산</code>)</li>
+<li><code>a = b</code> : 수학에서는 같다라는 의미이지만 프로그램에서는 <code>할당(대입)</code>연산자</li>
+<li><code>a == b</code> : 프로그램에서 <code>같다</code>라는 의미</li>
+<li><code>a != b</code> : <code>같지않다</code>라는 의미</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator04</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">10</span>, b = <span class="number">5</span>;</span><br><span class="line">		System.out.println(a&gt;b);	<span class="comment">//true</span></span><br><span class="line">		System.out.println(a&gt;=b);	<span class="comment">//true</span></span><br><span class="line">		System.out.println(a&lt;b);	<span class="comment">//false</span></span><br><span class="line">		System.out.println(a&lt;=b);	<span class="comment">//false</span></span><br><span class="line">		System.out.println(a==b);	<span class="comment">//false</span></span><br><span class="line">		System.out.println(a!=b);	<span class="comment">//true</span></span><br><span class="line">		</span><br><span class="line">		System.out.println(a&gt;<span class="number">10</span>);	<span class="comment">//false</span></span><br><span class="line">		System.out.println(a&gt;=<span class="number">10</span>);	<span class="comment">//true</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="5-논리연산자"><a href="#5-논리연산자" class="headerlink" title="5.논리연산자"></a>5.논리연산자</h2><ul>
+<li><code>논리연산자</code><br>  : 연산의 결과는 <code>true</code>, <code>false</code> 반환<br>  <code>여러개의 조건</code>을 판단 ▶ <code>조건식</code>에 많이 사용<ol>
+<li><code>조건A &amp;&amp; 조건B</code> : 조건A도, 조건B도 <code>모두 참일 경우</code> → 참으로 출력</li>
+<li><code>조건A || 조건B</code> : 조건A 또는 조건B 중에서 <code>하나라도 참일 경우</code> → 참으로 출력</li>
+<li><code>AND</code> 조건 (모두 만족) : <code>~~이면서</code>, <code>~~이고</code> </li>
+<li><code>OR</code> 조건 (하나라도 만족) : <code>~~이거나</code>, <code>~~또는</code></li>
+</ol>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator05</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="number">10</span> &gt; <span class="number">5</span> &amp;&amp; <span class="number">20</span> &gt; <span class="number">5</span>);	<span class="comment">//true &amp;&amp; true → true</span></span><br><span class="line">		System.out.println(<span class="number">10</span> &gt; <span class="number">5</span> &amp;&amp; <span class="number">5</span> &gt; <span class="number">20</span>);	<span class="comment">//true &amp;&amp; false → false</span></span><br><span class="line">		System.out.println(<span class="number">5</span> &gt; <span class="number">10</span> &amp;&amp; <span class="number">20</span> &gt; <span class="number">5</span>);	<span class="comment">//false &amp;&amp; true → false</span></span><br><span class="line">		System.out.println(<span class="number">5</span> &gt; <span class="number">10</span> &amp;&amp; <span class="number">5</span> &gt; <span class="number">20</span>);	<span class="comment">//false &amp;&amp; false → false</span></span><br><span class="line">		<span class="comment">//Dead code : 두 조건 중 조건1이 false 일때, 조건2가 무엇이든 false가 된다.</span></span><br><span class="line">		System.out.println(<span class="number">10</span> &gt; <span class="number">5</span> || <span class="number">20</span> &gt; <span class="number">5</span>);	<span class="comment">//true || true → true</span></span><br><span class="line">		System.out.println(<span class="number">10</span> &gt; <span class="number">5</span> || <span class="number">5</span> &gt; <span class="number">20</span>);	<span class="comment">//true || false → true</span></span><br><span class="line">		<span class="comment">//Dead code : 두 조건 중 조건1이 true 일때, 조건2가 무엇이든 true가 된다.</span></span><br><span class="line">		System.out.println(<span class="number">5</span> &gt; <span class="number">10</span> || <span class="number">20</span> &gt; <span class="number">5</span>);	<span class="comment">//false || true → true</span></span><br><span class="line">		System.out.println(<span class="number">5</span> &gt; <span class="number">10</span> || <span class="number">5</span> &gt; <span class="number">20</span>);	<span class="comment">//false || false → false</span></span><br><span class="line"> 	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="6-대입연산자"><a href="#6-대입연산자" class="headerlink" title="6.대입연산자"></a>6.대입연산자</h2><ul>
+<li><p><code>대입연산자(=)</code><br>  : <code>=</code>(equal)은 같다라는 의미가 아니라 <code>대입</code>을 의미 ▶ 할당연산자<br>  L-Value = R-Value : R-Value의 값(연산결과)을 L-Value에 대입(할당)</p>
+</li>
+<li><p><code>복합대입연산자</code><br>  : R-Value에서 사용되는 변수와 L-Value에 대입(할당)되는 변수가 동일할 때 사용 </p>
+<ul>
+<li><code>a += b</code> / <code>a = a + b</code> 과 동일</li>
+<li><code>a -= b</code> / <code>a = a - b</code> 과 동일</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator06</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">10</span>;	<span class="comment">//정수형 변수 a를 선언하고, 값(10)을 할당 → 초기화</span></span><br><span class="line">		System.out.println(<span class="string">"a의 값 : "</span> + a);	<span class="comment">//10</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> b = a;	<span class="comment">//정수형 변수 b를 선언하고, 값(변수 a의 값)을 할당 → 초기화</span></span><br><span class="line">		System.out.println(<span class="string">"b의 값 : "</span> + b);	<span class="comment">//10</span></span><br><span class="line">		</span><br><span class="line">		b = a + a;	<span class="comment">//재할당</span></span><br><span class="line">		System.out.println(<span class="string">"b의 값 : "</span> + b);	<span class="comment">//20</span></span><br><span class="line">		</span><br><span class="line">		a = a + a;	<span class="comment">//재할당</span></span><br><span class="line">		System.out.println(<span class="string">"a의 값 : "</span> + a);	<span class="comment">//20</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">//</span></span><br><span class="line">		a += a;		<span class="comment">//a = a + a;</span></span><br><span class="line">		System.out.println(<span class="string">"a의 값 : "</span> + a);	<span class="comment">//40</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> x = <span class="number">10</span>;</span><br><span class="line">		x = x + <span class="number">100</span>;</span><br><span class="line">		System.out.println(<span class="string">"x의 값 : "</span> + x);	<span class="comment">//110</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> y = <span class="number">10</span>;</span><br><span class="line">		y += <span class="number">100</span>;</span><br><span class="line">		System.out.println(<span class="string">"y의 값 : "</span> + y);	<span class="comment">//110</span></span><br><span class="line">		</span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="7-3항연산자"><a href="#7-3항연산자" class="headerlink" title="7. 3항연산자"></a>7. 3항연산자</h2><ul>
+<li><code>3항연산자</code><br>  : 3개의 항으로 구성<br>  ▶ <code>조건식</code>을 작성할 경우 많이 편리<br>  <code>조건식 ? &quot;참값&quot; : &quot;거짓값&quot;;</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator07</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//3항 연산</span></span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">		String result = a == <span class="number">10</span> ? <span class="string">"맞다"</span> : <span class="string">"틀리다"</span>;</span><br><span class="line">		System.out.println(result);</span><br><span class="line">		System.out.println(a == <span class="number">10</span> ? <span class="string">"맞다"</span> : <span class="string">"틀리다"</span>);</span><br><span class="line">		</span><br><span class="line">		String str1 = <span class="string">"100"</span>;			<span class="comment">//문자 100</span></span><br><span class="line">		<span class="keyword">if</span>(str1 == <span class="string">"100"</span>) &#123; 			<span class="comment">//숫자 100 → "" 추가 → 문자 100</span></span><br><span class="line">			System.out.println(<span class="string">"맞습니다."</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			System.out.println(<span class="string">"틀립니다."</span>);</span><br><span class="line">		&#125;<span class="comment">//if()</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<h2 id="특수기호문자-Escape-Sequence"><a href="#특수기호문자-Escape-Sequence" class="headerlink" title="특수기호문자(Escape Sequence)"></a>특수기호문자(Escape Sequence)</h2><ul>
+<li><code>특수기호문자(Escape Sequence)</code><br>  : 프로그램에서 사용되는 특수기호문자, <code>역슬래시(\)</code>를 먼저 입력하고 사용한다.<br>  ▶ <code>출력문</code>에 많이 사용 <ol>
+<li><code>\t</code> : 탭간격(기본 8칸 띄어쓰기)</li>
+<li><code>\n</code> : 줄바꿈(뉴라인)</li>
+<li><code>\b</code> : 백스페이스</li>
+<li><code>\r</code> : 행의 처음으로 커서를 이동</li>
+<li><code>\&#39;</code> : 작은따옴표를 표시</li>
+<li><code>\&quot;</code> : 큰따옴표를 표시</li>
+<li><code>\\</code> : <code>\</code>(역슬래시, root) 표시</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator08</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"1.HelloWorld"</span>);</span><br><span class="line">		System.out.println(<span class="string">"2.Hello"</span> + <span class="string">"\t"</span> + <span class="string">"World"</span>); <span class="comment">// \t : 탭간격(기본 8칸) </span></span><br><span class="line">								<span class="comment">//글꼴에 따라 띄어 쓴 정도가 다름</span></span><br><span class="line">		System.out.println(<span class="string">"3.Hello\tWorld"</span>); <span class="comment">//문자열 출력은 안에 연결해서 사용가능</span></span><br><span class="line">		System.out.println(<span class="string">"4.Hello"</span> + <span class="string">"\n"</span> + <span class="string">"World"</span>); <span class="comment">// \n : 줄바꿈(뉴라인)</span></span><br><span class="line">		System.out.println(<span class="string">"5.Hello"</span> + <span class="string">"\b"</span> + <span class="string">"World"</span>); <span class="comment">// \b : 백스페이스</span></span><br><span class="line">		System.out.println(<span class="string">"6.Hello"</span> + <span class="string">"\r"</span> + <span class="string">"World"</span>); <span class="comment">// \r : Carriage Return</span></span><br><span class="line">							<span class="comment">// 6.Hello : 행의 처음으로 커서를 이동</span></span><br><span class="line">							<span class="comment">// World   </span></span><br><span class="line">							<span class="comment">// = Worldlo </span></span><br><span class="line">		System.out.println(<span class="string">"7.Hello"</span> + <span class="string">"\'"</span> + <span class="string">"World"</span>);	<span class="comment">// \' : 작은따옴표를 표시 </span></span><br><span class="line">		System.out.println(<span class="string">"8.Hello"</span> + <span class="string">"\""</span> + <span class="string">"World"</span>);	<span class="comment">// \" : 큰따옴표를 표시 </span></span><br><span class="line">		System.out.println(<span class="string">"9.Hello"</span> + <span class="string">"\\"</span> + <span class="string">"World"</span>);	<span class="comment">// \\ : \(역슬래시, root) 표시</span></span><br><span class="line">		</span><br><span class="line">		System.out.println(<span class="string">"번호"</span> + <span class="string">"\t"</span> + <span class="string">"이름"</span> + <span class="string">"\t"</span> + <span class="string">"주소"</span>); </span><br><span class="line">		<span class="comment">// 아래 내용들이 깔끔하게 출력</span></span><br><span class="line">		System.out.println(<span class="string">"001"</span> + <span class="string">"\t"</span> + <span class="string">"홍길동"</span> + <span class="string">"\t"</span> + <span class="string">"광주시 서구 농성동"</span>);</span><br><span class="line">		System.out.println(<span class="string">"002"</span> + <span class="string">"\t"</span> + <span class="string">"허준"</span> + <span class="string">"\t"</span> + <span class="string">"광주시 남구 봉선동"</span>);</span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://user-images.githubusercontent.com/23150245/55808500-28e94200-5b1f-11e9-84b2-71c400403ec7.PNG" alt="08"></p>
+<h2 id="16진수-8진수"><a href="#16진수-8진수" class="headerlink" title="16진수, 8진수"></a>16진수, 8진수</h2><ul>
+<li><code>16진수</code> : 숫자 앞에 <code>0x</code>를 붙인다.</li>
+<li><code>8진수</code>  : 숫자 앞에 <code>0</code>을 붙인다.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator09</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">11</span>;	<span class="comment">//10진수</span></span><br><span class="line">		System.out.println(a);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> b = <span class="number">011</span>;	<span class="comment">//8진수</span></span><br><span class="line">		System.out.println(b);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> c = <span class="number">0x11</span>;	<span class="comment">//16진수</span></span><br><span class="line">		System.out.println(c);</span><br><span class="line"></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/05/java02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1799,7 +2060,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
