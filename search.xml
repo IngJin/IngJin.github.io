@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[19년 5월 2주차 Today I Learned]]></title>
     <url>%2F2019%2F05%2F07%2F1952%2F</url>
-    <content type="text"><![CDATA[190506 TIL 어린이날 대체 공휴일 190507 TIL View파트 시작HTML/CSS/JavaScript Java입출력]]></content>
+    <content type="text"><![CDATA[190506 TIL 어린이날 대체 공휴일 190507 TIL View파트 시작HTML/CSS/JavaScript Java입출력 190508 TIL IP Address: 네트워크에 연결되어 있는 터미널(단말기)을 구분하기 위한 고유의 주소CMD &gt; ipconfigIPv4 : 32bit 구성IPv6: 128bit 구성 Port Number: 네트워크에 연결되어 있는 터미널의 데이터가 전송되는 통로0 ~ 65535 : 할당0 ~ 1023 : 예약된 포트로서 사용할 수 없다.CMD &gt; netstat /an127.0.0.1 : 루프백IP (자기자신을 나타내는 IP) Socket: IP Address + Port NumberServer Socket : Response(응답) ▶ Sever Socket, SocketClient Socket : Request(요청) ▶ Socket 송신(출력) 수신(입력) [Client] [Server] hello ------------&gt; hello ▶ 바이트형 : InputStream, OutputStream 안녕 ------------&gt; 안녕 ▶ 문자형 : InputStreamReader, OutputStreamReader 버퍼활용 : BufferedReader, BufferedWriter]]></content>
       <categories>
         <category>TIL</category>
       </categories>

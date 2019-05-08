@@ -413,12 +413,24 @@
                 
               
 
-              <time title="Post created: 2019-05-07 18:56:37 / Updated at: 23:46:55" itemprop="dateCreated datePublished" datetime="2019-05-07T18:56:37+09:00">2019-05-07</time>
+              <time title="Post created: 2019-05-07 18:56:37" itemprop="dateCreated datePublished" datetime="2019-05-07T18:56:37+09:00">2019-05-07</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-05-08 23:24:02" itemprop="dateModified" datetime="2019-05-08T23:24:02+09:00">2019-05-08</time>
               
             
           </span>
@@ -494,7 +506,20 @@
 <li><p><code>Java</code>입출력</p>
 </li>
 </ul>
-
+<h2 id="190508-TIL"><a href="#190508-TIL" class="headerlink" title="190508 TIL"></a>190508 TIL</h2><ul>
+<li><p><code>IP Address</code><br>: 네트워크에 연결되어 있는 터미널(단말기)을 구분하기 위한 고유의 주소<br><code>CMD &gt; ipconfig</code><br><code>IPv4</code> : 32bit 구성<br><code>IPv6</code>: 128bit 구성</p>
+</li>
+<li><p><code>Port Number</code><br>: 네트워크에 연결되어 있는 터미널의 데이터가 전송되는 통로<br><code>0 ~ 65535</code> : 할당<br><code>0 ~ 1023</code> : 예약된 포트로서 사용할 수 없다.<br><code>CMD &gt; netstat /an</code><br><code>127.0.0.1</code> : 루프백IP (자기자신을 나타내는 IP)</p>
+</li>
+<li><p><code>Socket</code><br>: <code>IP Address</code> + <code>Port Number</code><br><code>Server Socket</code> : Response(응답) ▶ Sever Socket, Socket<br><code>Client Socket</code> : Request(요청) ▶ Socket</p>
+</li>
+</ul>
+<pre><code>송신(출력)            수신(입력)
+[Client]              [Server]
+hello ------------&gt;    hello     ▶ 바이트형 : InputStream, OutputStream
+안녕  ------------&gt;    안녕      ▶ 문자형 : InputStreamReader, OutputStreamReader
+                                버퍼활용 : BufferedReader, BufferedWriter
+</code></pre>
           
         
       
