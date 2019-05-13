@@ -368,6 +368,185 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/05/13/1953/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IngJin">
+      <meta itemprop="description" content="잉진은 오늘도 코딩을 합니다.">
+      <meta itemprop="image" content="/images/fava.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="잉로그">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/13/1953/" class="post-title-link" itemprop="url">19년 5월 3주차 Today I Learned</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-05-13 18:56:37 / Updated at: 23:24:18" itemprop="dateCreated datePublished" datetime="2019-05-13T18:56:37+09:00">2019-05-13</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/TIL/" itemprop="url" rel="index"><span itemprop="name">TIL</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/05/13/1953/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/05/13/1953/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="190512-TIL"><a href="#190512-TIL" class="headerlink" title="190512 TIL"></a>190512 TIL</h2><ul>
+<li><p><code>4차산업혁명특강</code></p>
+</li>
+<li><p><code>AWT</code></p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.awt.Frame;</span><br><span class="line"><span class="keyword">import</span> java.awt.event.WindowAdapter;</span><br><span class="line"><span class="keyword">import</span> java.awt.event.WindowEvent;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FirstFrame</span> <span class="keyword">extends</span> <span class="title">Frame</span></span>&#123; <span class="comment">//FirstFrame()의 부모는 Frame()</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">FirstFrame</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>(<span class="string">"FirstFrame Exam"</span>); <span class="comment">//현재클래스의 부모를 의미</span></span><br><span class="line">		setSize(<span class="number">300</span>, <span class="number">200</span>);</span><br><span class="line">		setVisible(<span class="keyword">true</span>);</span><br><span class="line">		addWindowListener(<span class="keyword">new</span> WindowAdapter() &#123;</span><br><span class="line">			<span class="meta">@Override</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">windowClosing</span><span class="params">(WindowEvent e)</span> </span>&#123; <span class="comment">//ctrl + space (닫기버튼 생성)</span></span><br><span class="line">				dispose(); <span class="comment">//메모리에서 지우겠다.</span></span><br><span class="line">				System.exit(<span class="number">0</span>); <span class="comment">//종료를 시키겠다.</span></span><br><span class="line">			&#125;<span class="comment">//windowClosing()</span></span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;<span class="comment">//FirstFrame()</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">new</span> FirstFrame();</span><br><span class="line">		</span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">1 : AWT 프로그램 구현을 위해 java.awt 패키지를 import</span></span><br><span class="line"><span class="comment">2 ~ 3 : 컴포넌트의 이벤트 처리를 위해 java.awt.event 패키지를 import</span></span><br><span class="line"><span class="comment">5 : Frame 클래스를 상속받는다.</span></span><br><span class="line"><span class="comment">6 : 생성자 메소드</span></span><br><span class="line"><span class="comment">7 : 부모클래스의 생성자를 호출(super()) ▶ Frame Window의 Title</span></span><br><span class="line"><span class="comment">8 : Frame의 크기를 픽셀단위로 표시(width, height)</span></span><br><span class="line"><span class="comment">9 : Frame을 화면에 표시</span></span><br><span class="line"><span class="comment">10 ~ 16 : Frame의 닫기단추를 누르면 프로그램이 종료</span></span><br><span class="line"><span class="comment">▶ 컴퍼넌트 : Listener() → Adapter 객체 생성 → windowClosing() 재정의</span></span><br><span class="line"><span class="comment">18 : main()메소드에서 FirstFrame 객체 생성 </span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/05/07/1952/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2291,216 +2470,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ingjin.github.io/2019/04/11/java05/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IngJin">
-      <meta itemprop="description" content="잉진은 오늘도 코딩을 합니다.">
-      <meta itemprop="image" content="/images/fava.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="잉로그">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/11/java05/" class="post-title-link" itemprop="url">JAVA기초 05. 반복문</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">작성일</span>
-              
-
-              
-                
-              
-
-              <time title="Post created: 2019-04-11 18:56:37" itemprop="dateCreated datePublished" datetime="2019-04-11T18:56:37+09:00">2019-04-11</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Updated at: 2019-04-12 23:57:39" itemprop="dateModified" datetime="2019-04-12T23:57:39+09:00">2019-04-12</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">댓글: </span>
-                <a href="/2019/04/11/java05/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/11/java05/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="반복문이란"><a href="#반복문이란" class="headerlink" title="반복문이란?"></a><code>반복문</code>이란?</h2><p><strong>일정한 조건까지 문장을 반복적으로 실행</strong><br><code>순환문</code>, <code>Loop문</code>이라고도 한다.<br>종류는 <code>for문</code>, <code>while문</code>, <code>do~while문</code></p>
-<h2 id="for문"><a href="#for문" class="headerlink" title="for문"></a>for문</h2><h3 id="for문-1"><a href="#for문-1" class="headerlink" title="for문"></a><code>for문</code></h3><p> : <em>주로 반복횟수를 알고 있을때 사용</em><br> <code>초기값</code>이 <code>조건식을 만족</code>하여 <strong>참일 경우에 실행</strong> 후<br> <code>증감식</code>에 의해 <code>초기값이 변경</code>되고 다시 <code>조건식과 비교</code>하여 <strong>참일 경우 실행</strong><br> 또 <code>증감식</code>에 의해 <code>초기값이 변경</code>되고 <code>조건식과 비교</code>하여 <strong>거짓일 경우 for문을 종료</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(초기값(시작값) ; 조건식(최종값) ; 반복후작업(증감값)) &#123;</span><br><span class="line">	실행문(반복할 문장);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="예제1-1"><a href="#예제1-1" class="headerlink" title="예제1-1"></a><code>예제1-1</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">For</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//0부터 10까지 출력하시오.</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt;= <span class="number">10</span> ; i++) &#123;	<span class="comment">//0부터 10까지 1씩증가(반복)</span></span><br><span class="line">			System.out.println(i);		<span class="comment">//값을 출력</span></span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">		</span><br><span class="line">		System.out.println(); <span class="comment">// 줄내려쓰기</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//0부터 10까지의 수 중에서 짝수만 출력 : for</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt;=<span class="number">10</span> ; i += <span class="number">2</span>) &#123;	<span class="comment">//i는 지역변수라서 중복되어도 상관 없다.</span></span><br><span class="line">			System.out.println(i);</span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">		</span><br><span class="line">		System.out.println();</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//0부터 10까지의 수 중에서 짝수만 출력 : for, if</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt;= <span class="number">10</span> ; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">				System.out.println(i);</span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">		</span><br><span class="line">		System.out.println();</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//10부터 0까지 출력</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">10</span> ; i &gt;= <span class="number">0</span> ; i--) &#123;</span><br><span class="line">			System.out.println(i);</span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
-<h3 id="예제1-2"><a href="#예제1-2" class="headerlink" title="예제1-2"></a><code>예제1-2</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">For</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 1부터 10까지의 누적합(sum)을 구하시오</span></span><br><span class="line">		<span class="keyword">int</span> sum = <span class="number">0</span>;	<span class="comment">//누적합(결과)이 저장될 변수(sum)를 초기화</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= <span class="number">10</span> ; i++) &#123;</span><br><span class="line">			sum += i; <span class="comment">// sum = sum + i;</span></span><br><span class="line">			System.out.println(<span class="string">"i값 : "</span> + i + <span class="string">", sum 값 : "</span> + sum);</span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">		System.out.println(<span class="string">"누적합 : "</span> + sum);</span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
-<h3 id="예제2-1"><a href="#예제2-1" class="headerlink" title="예제2-1"></a><code>예제2-1</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">For</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 1부터 10까지의 수 중에서 홀수만 출력 : for(반복), if(홀수판단)  ▶  한줄로 출력</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= <span class="number">10</span> ; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">1</span>) &#123;	<span class="comment">//(i % 2 != 0)</span></span><br><span class="line">				System.out.print(i + <span class="string">"\t"</span>);</span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
-<h3 id="예제2-2"><a href="#예제2-2" class="headerlink" title="예제2-2"></a><code>예제2-2</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">For</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 1부터 100까지 수 중에서 홀수의 누적합(oddSum)을 구하여 출력 </span></span><br><span class="line">		<span class="comment">//: for(반복), if(홀수 판단)</span></span><br><span class="line">		<span class="keyword">int</span> oddSum = <span class="number">0</span>;			<span class="comment">// 누적합(결과)이 저장될 변수(oddSum)를 초기화</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= <span class="number">100</span> ; i++) &#123;	<span class="comment">// 1부터 100까지 1씩 증가(반복)</span></span><br><span class="line">			<span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">1</span>) &#123;	<span class="comment">// 홀수이면 (i % 2 != 0) </span></span><br><span class="line">				oddSum += i;	<span class="comment">// 홀수 누적합을 계산 (oddSum = oddSum + i;)</span></span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">		System.out.println(<span class="string">"홀수의 누적합 : "</span> + oddSum);</span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
-<h3 id="예제3-1"><a href="#예제3-1" class="headerlink" title="예제3-1"></a><code>예제3-1</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">For</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//1부터 100까지의 수 중에서 홀수의 합(oddSum)과 짝수의 합(evenSum)을 출력</span></span><br><span class="line">		<span class="comment">//홀수의 개수(oddCnt)와 짝수의 개수(evenCnt)를 출력</span></span><br><span class="line">		<span class="comment">//for(반복),if(조건)</span></span><br><span class="line">		<span class="keyword">int</span> oddSum = <span class="number">0</span>, evenSum = <span class="number">0</span>;	<span class="comment">//결과가 저장될 변수를 초기화</span></span><br><span class="line">		<span class="keyword">int</span> oddCnt = <span class="number">0</span>,	evenCnt = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= <span class="number">100</span> ; i++) &#123;	<span class="comment">//1부터 100까지 1씩 증가시키면서 반복</span></span><br><span class="line">			<span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">1</span>) &#123;		<span class="comment">//홀수이면(i % 2 != 0)</span></span><br><span class="line">				oddSum += i;	<span class="comment">//홀수 누적합 계산(oddSum = oddSum + i)</span></span><br><span class="line">				oddCnt++;	<span class="comment">//홀수 누적 개수를 증가(oddCnt += 1;)</span></span><br><span class="line">			&#125;<span class="keyword">else</span> &#123;			<span class="comment">//짝수이면</span></span><br><span class="line">				evenSum += i;	<span class="comment">//짝수 누적합 계산</span></span><br><span class="line">				evenCnt++;	<span class="comment">//짝수 개수를 증가</span></span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">		System.out.println(<span class="string">"홀수의 누적합 : "</span> + oddSum + <span class="string">", 홀수의 개수 : "</span> + oddCnt);</span><br><span class="line">		System.out.println(<span class="string">"짝수의 누적합 : "</span> + evenSum + <span class="string">", 짝수의 개수 : "</span> + evenCnt);</span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
-<h3 id="예제3-2"><a href="#예제3-2" class="headerlink" title="예제3-2"></a><code>예제3-2</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">For</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 1부터 100까지의 수 중에서 3의 배수의 누적합(sum)과 3의 배수의 개수(cnt)를 출력</span></span><br><span class="line">		<span class="keyword">int</span> sum = <span class="number">0</span>, cnt = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= <span class="number">100</span> ; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i % <span class="number">3</span> == <span class="number">0</span>) &#123;</span><br><span class="line">				sum += i;</span><br><span class="line">				cnt++;</span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">		System.out.println(<span class="string">"누적합 : "</span> + sum);</span><br><span class="line">		System.out.println(<span class="string">"배수의 개수 : "</span> + cnt);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//1부터 100까지의 수 중에서 3의 배수를 출력하시오</span></span><br><span class="line">		<span class="comment">//단, 한줄에 10개의 값을 출력하시오.</span></span><br><span class="line">		<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= <span class="number">100</span> ; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i % <span class="number">3</span> == <span class="number">0</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span>(i &lt; <span class="number">10</span>) &#123;</span><br><span class="line">					System.out.print(<span class="string">"0"</span> + i + <span class="string">"\t"</span>);	</span><br><span class="line">					<span class="comment">// 10보다 작은 3,6,9에 0을 붙여서 자리수를 맞춰준다.</span></span><br><span class="line">				&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">					System.out.print(i + <span class="string">"\t"</span>);</span><br><span class="line">				&#125;<span class="comment">//if2</span></span><br><span class="line">				count++;			<span class="comment">//찍을때마다 카운트 1씩 증가</span></span><br><span class="line">				<span class="keyword">if</span> (count == <span class="number">10</span>) &#123;		</span><br><span class="line">				<span class="comment">//count % 10 == 0 이거쓰면 count 초기화 안해도 된다.</span></span><br><span class="line">					System.out.println();</span><br><span class="line">					count = <span class="number">0</span>;		<span class="comment">//count를 0으로 초기회</span></span><br><span class="line">				&#125;<span class="comment">//if3</span></span><br><span class="line">			&#125;<span class="comment">//if1</span></span><br><span class="line">		&#125;<span class="comment">//for		</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">// class</span></span><br></pre></td></tr></table></figure>
-<h2 id="while문"><a href="#while문" class="headerlink" title="while문"></a>while문</h2><h3 id="while문-1"><a href="#while문-1" class="headerlink" title="while문"></a><code>while문</code></h3><p> : <em>반복횟수를 모를 경우 사용</em><br> <code>조건식</code>이 <strong>참이면 실행</strong>되고, <strong>거짓이면 종료</strong>된다.<br> (<code>선조건</code> → <code>후처리</code>)</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">초기값 설정; </span><br><span class="line"><span class="keyword">while</span>(조건식)&#123;</span><br><span class="line">	조건식이 참일때 실행되는 문장(실행문);</span><br><span class="line">	증감값;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="예제1"><a href="#예제1" class="headerlink" title="예제1"></a><code>예제1</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">While</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//1부터 10까지의 누적합(forSum)을 구하시오 : for</span></span><br><span class="line">		<span class="keyword">int</span> forSum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= <span class="number">10</span> ; i++ ) &#123;</span><br><span class="line">			forSum += i;</span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">		System.out.println(<span class="string">"for 누적합 : "</span> + forSum);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//1부터 10까지의 누적합(whileSum)을 구하시오 : while</span></span><br><span class="line">		<span class="keyword">int</span> whileSum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(i &lt;= <span class="number">10</span>) &#123;</span><br><span class="line">			whileSum += i;</span><br><span class="line">			i++;</span><br><span class="line">		&#125;<span class="comment">//while</span></span><br><span class="line">		System.out.println(<span class="string">"while 누적합 : "</span> + whileSum);</span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
-<h3 id="예제2"><a href="#예제2" class="headerlink" title="예제2"></a><code>예제2</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">While</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 1부터 10까지의 수 중에서 짝수의 합(evenSum)을 구하시오 : for, if;</span></span><br><span class="line">		<span class="keyword">int</span> evenSum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= <span class="number">10</span> ; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i % <span class="number">2</span> ==<span class="number">0</span>) &#123;</span><br><span class="line">				evenSum += i;</span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">		&#125;<span class="comment">//fot</span></span><br><span class="line">		System.out.println(<span class="string">"for 짝수의 합 : "</span> + evenSum);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 1부터 10까지의 수 중에서 짝수의 합(evenSum)을 구하시오 : while, if;</span></span><br><span class="line">		evenSum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(i &lt;= <span class="number">10</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">0</span>) &#123;		</span><br><span class="line">			evenSum += i; </span><br><span class="line">			&#125;<span class="comment">//if			</span></span><br><span class="line">			i++;			</span><br><span class="line">			<span class="comment">//증감식은 while문 안에 있어야한다. 만약, if문 안에 집어넣으면 무한루프</span></span><br><span class="line">		&#125;<span class="comment">//while</span></span><br><span class="line">		System.out.println(<span class="string">"while 짝수의 합 : "</span> + evenSum);</span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
-<h2 id="do-while문"><a href="#do-while문" class="headerlink" title="do~while문"></a>do~while문</h2><h3 id="do-while문-1"><a href="#do-while문-1" class="headerlink" title="do~while문"></a><code>do~while문</code></h3><p> : <code>조건식</code>이 <strong>참이든 거짓이든 상관없이</strong><br> <code>실행문</code>(do)안의 문장을 <strong>무조건 한번 실행</strong>시킨 후<br> <code>조건을 검사</code>하여 <code>반복을 결정</code>한다.<br> (<code>선처리</code> → <code>후조건</code>)</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">초기값;</span><br><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">	실행문;</span><br><span class="line">	증감값;</span><br><span class="line">&#125;<span class="keyword">while</span>(조건식);</span><br></pre></td></tr></table></figure>
-<h3 id="예제1-1"><a href="#예제1-1" class="headerlink" title="예제1"></a><code>예제1</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Do_while</span> </span>&#123; <span class="comment">//많이 안쓰임 (모르면 넘어가도 무관)</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 1부터 10까지의 수 중에서 짝수의 합(evenSum)을 구하시오 : while, if</span></span><br><span class="line">		<span class="keyword">int</span> evenSum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(i &lt;= <span class="number">10</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">0</span>) &#123;		</span><br><span class="line">			evenSum += i; </span><br><span class="line">			&#125;<span class="comment">//if			</span></span><br><span class="line">			i++;			</span><br><span class="line">			<span class="comment">//증감식은 while문 안에 있어야한다.만약, if문 안에 집어넣으면 무한루프</span></span><br><span class="line">		&#125;<span class="comment">//while</span></span><br><span class="line">		System.out.println(<span class="string">"while 짝수의 합 : "</span> + evenSum);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 1부터 10까지의 수 중에서 짝수의 합(evenSum)을 구하시오 : do_while, if</span></span><br><span class="line">		evenSum = <span class="number">0</span>;	<span class="comment">//재할당 : 데이터타입은 위에서 이미 선언함</span></span><br><span class="line">		i = <span class="number">1</span>; 		<span class="comment">//재할당 : 데이터타입은 위에서 이미 선언함</span></span><br><span class="line">		<span class="keyword">do</span> &#123;</span><br><span class="line">			<span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">				evenSum += i;</span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">			i++;</span><br><span class="line">		&#125;<span class="keyword">while</span>(i &lt;= <span class="number">10</span>);</span><br><span class="line">		System.out.println(<span class="string">"do_while 짝수의 합 : "</span> + evenSum);</span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
-<h2 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h2><h3 id="continue-1"><a href="#continue-1" class="headerlink" title="continue"></a><code>continue</code></h3><p> : 반복문에서 <code>continue</code> 아래의 실행문은 실행하지 않고<br> 제어권을 반복문의 첫머리로 이동하는 것</p>
-<h3 id="예제1-2"><a href="#예제1-2" class="headerlink" title="예제1"></a><code>예제1</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Continue</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;	</span><br><span class="line">		<span class="comment">//1부터 10까지의 수 중에서 홀수의 누적합(oddSum)을 구하시오 </span></span><br><span class="line">		<span class="comment">//: for, if</span></span><br><span class="line">		<span class="keyword">int</span> oddSum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= <span class="number">10</span> ; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">1</span>) &#123;</span><br><span class="line">				oddSum += i;</span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">		System.out.println(<span class="string">"홀수의 누적합 : "</span> + oddSum);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//1부터 10까지의 수 중에서 홀수의 누적합(oddSum)을 구하시오 </span></span><br><span class="line">		<span class="comment">//: for, if, continue</span></span><br><span class="line">		oddSum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= <span class="number">10</span> ; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">0</span>) &#123;	<span class="comment">//짝수이면</span></span><br><span class="line">				<span class="keyword">continue</span>;	<span class="comment">//반복문의 처음으로 되돌림</span></span><br><span class="line">			&#125;<span class="keyword">else</span> &#123;			<span class="comment">//홀수이면</span></span><br><span class="line">				oddSum += i;	<span class="comment">//홀수의 누적합 계산</span></span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">		System.out.println(<span class="string">"홀수의 누적합 : "</span> + oddSum);</span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
-<h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><h3 id="break-1"><a href="#break-1" class="headerlink" title="break"></a><code>break</code></h3><p> : 반복문을 탈출하는 명령어</p>
-<h3 id="예제1-3"><a href="#예제1-3" class="headerlink" title="예제1"></a><code>예제1</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Break</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span> ; <span class="keyword">true</span> ; i++) &#123; 	<span class="comment">//무한루프</span></span><br><span class="line">			<span class="keyword">if</span>(i == <span class="number">10</span>) &#123;</span><br><span class="line">				System.out.println(<span class="string">"i의 값이 10이므로 반복문을 종료합니다!"</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">			System.out.println(<span class="string">"i의 값 : "</span> + i);</span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">	&#125;<span class="comment">//main()</span></span><br><span class="line">&#125;<span class="comment">//class</span></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -2544,7 +2518,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
