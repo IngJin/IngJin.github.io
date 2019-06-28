@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="잉로그">
 <meta property="og:description" content="190624 TIL 다시 복귀했습니다.  기억이 가물가물한 hexo 포스팅 복습  Git Bash  cd : 이동 hexo new draft ~ : 초안 생성 hexo publish ~ : 글 포스팅 hexo server : 로컬서버(localhost:4000) hexo g : 원격저장소에 업로드 위한 파일 생성 hexo d : 원격저장소에 업로드    1">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2019-06-27T14:43:17.881Z">
+<meta property="og:updated_time" content="2019-06-28T14:31:20.226Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="19년 6월 4주차 Today I Learned">
 <meta name="twitter:description" content="190624 TIL 다시 복귀했습니다.  기억이 가물가물한 hexo 포스팅 복습  Git Bash  cd : 이동 hexo new draft ~ : 초안 생성 hexo publish ~ : 글 포스팅 hexo server : 로컬서버(localhost:4000) hexo g : 원격저장소에 업로드 위한 파일 생성 hexo d : 원격저장소에 업로드    1">
@@ -429,7 +429,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2019-06-27 23:43:17" itemprop="dateModified" datetime="2019-06-27T23:43:17+09:00">2019-06-27</time>
+                <time title="Updated at: 2019-06-28 23:31:20" itemprop="dateModified" datetime="2019-06-28T23:31:20+09:00">2019-06-28</time>
               
             
           </span>
@@ -522,25 +522,9 @@
 <li><p><code>프로젝트 팀 발표</code><br>: <code>멸망팟</code>과 <code>희망팟</code> 갈림길에서 살아남았다.</p>
 </li>
 <li><p><code>Spring</code><br>: <code>controller</code> - @controller</p>
-<pre><code>@RequestMapping // 처리할 메소드선언 후 어떤 요청에 대해 선언한 메소드를 실행할 것인지 매핑한다.
-선언된 메소드 // 필요한 처리에 해당하는 로직선언 후 화면으로 연결한다.
-return &quot;화면명&quot;;
-</code></pre></li>
-<li><p><code>Controller</code> 에서 <code>View</code>로 데이터 전달<br>: <code>Model</code> 객체, <code>ModelAndView</code> 객체</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">@RequestMapping // 처리할 메소드선언 후 어떤 요청에 대해 선언한 메소드를 실행할 것인지 매핑한다.</span><br><span class="line">선언된 메소드 // 필요한 처리에 해당하는 로직선언 후 화면으로 연결한다.</span><br><span class="line">return &quot;화면명&quot;;</span><br><span class="line">```					</span><br><span class="line"></span><br><span class="line">+ `Controller` 에서 `View`로 데이터 전달 </span><br><span class="line">: `Model` 객체, `ModelAndView` 객체</span><br><span class="line"></span><br><span class="line">+ 화면의 `form`태그에서 전송한 데이터 접근</span><br><span class="line">1. `HttpServletRequest` 객체를 이용하는 경우</span><br><span class="line">2. `@RequestParam` 이용하는 경우</span><br><span class="line">3. `데이터객체(DTO/VO)` 이용하는 경우</span><br><span class="line">4. `경로`를 이용하는 경우</span><br><span class="line"></span><br><span class="line">+ 화면의 연결 : `redirect`, `forward`</span><br><span class="line"></span><br><span class="line">+ `안드로이드`</span><br><span class="line">: 도전 3 - 초급문제를 세시간 동안 겨우 풀었다.</span><br><span class="line"></span><br><span class="line">## 190628 TIL</span><br><span class="line"></span><br><span class="line">+ `Spring`</span><br><span class="line">: 초기설정은 `MVC2`보다 어려운데 나머지는 스프링이 더 쉬운것같다.</span><br><span class="line">`detail`,`update`,`delete`구현</span><br><span class="line"></span><br><span class="line">+ `HTML`에 외부`CSS`파일을 적용해봄</span><br><span class="line">```css</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;~.css&quot;/&gt;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>화면의 <code>form</code>태그에서 전송한 데이터 접근</p>
-</li>
-</ul>
-<ol>
-<li><code>HttpServletRequest</code> 객체를 이용하는 경우</li>
-<li><code>@RequestParam</code> 이용하는 경우</li>
-<li><code>데이터객체(DTO/VO)</code> 이용하는 경우</li>
-<li><code>경로</code>를 이용하는 경우</li>
-</ol>
-<ul>
-<li><p>화면의 연결 : <code>redirect</code>, <code>forward</code></p>
-</li>
-<li><p><code>안드로이드</code><br>: 도전 3 - 초급문제를 세시간 동안 겨우 풀었다.</p>
+<li><p><code>안드로이드</code><br>: 도전 4 - 텍스트입력창 </p>
 </li>
 </ul>
 
