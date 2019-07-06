@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[19년 7월 1주차 Today I Learned]]></title>
     <url>%2F2019%2F07%2F02%2F1971%2F</url>
-    <content type="text"><![CDATA[190701 TIL Spring Tiles Framework: Tiles는 웹페이지의 상단메뉴나 좌측메뉴, 공통 파일 include 등의 반복적인 부분을한 곳에서 깔끔하게 관리할 수 있게 도와주는 템플릿 프레임워크 안드로이드: 뭔가 많이 했는데 그게 뭔지는 모르겠다. 보강: 반응형웹 190702 TIL Spring: 파일첨부 구현 안드로이드: Toast,SnackBar구현 보강: 형상관리(SVN) 190703 TIL Spring: 파일첨부 구현 안드로이드: Intent 전화걸기,네이버화면 띄우기 보강: 형상관리(SVN) 프로젝트 컨펌 190704 TIL Spring: 외부JavaScript파일 링크공지글수정처리,답글처리 안드로이드: Intent 전화번호넘기기 보강: 오라클DB설치 하다가 끝남 190705 TIL Spring: 답글 들여쓰기,검색처리,페이징 안드로이드: Intent,DTO값 넘기기 자바기본용어 너무 취약한것 같다]]></content>
+    <content type="text"><![CDATA[190701 TIL Spring Tiles Framework: Tiles는 웹페이지의 상단메뉴나 좌측메뉴, 공통 파일 include 등의 반복적인 부분을한 곳에서 깔끔하게 관리할 수 있게 도와주는 템플릿 프레임워크 안드로이드: 뭔가 많이 했는데 그게 뭔지는 모르겠다. 보강: 반응형웹 190702 TIL Spring: 파일첨부 구현 안드로이드: Toast,SnackBar구현 보강: 형상관리(SVN) 190703 TIL Spring: 파일첨부 구현 안드로이드: Intent 전화걸기,네이버화면 띄우기 보강: 형상관리(SVN) 프로젝트 컨펌 190704 TIL Spring: 외부JavaScript파일 링크공지글수정처리,답글처리 안드로이드: Intent 전화번호넘기기 보강: 오라클DB설치 하다가 끝남 190705 TIL Spring: 답글 들여쓰기,검색처리,페이징 안드로이드: Intent,DTO값 넘기기 자바기본용어 너무 취약한것 같다 190706 TIL 티스토리블로그로 넘어갈지 고민중]]></content>
       <categories>
         <category>TIL</category>
       </categories>
